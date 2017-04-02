@@ -8,11 +8,9 @@
 #include "BasePersistenceManager.h"
 
 namespace persistence {
-    class HackathonPersistenceManager : BasePersistenceManager {
+    class HackathonPersistenceManager : public BasePersistenceManager {
     public:
-
-    private:
-        virtual errorHandler::PersistenceErrorhandler create(model::PersistableObject objectToCreate) override;
+        virtual errorHandler::PersistenceErrorhandler create(model::PersistableObject& objectToCreate) override;
 
         virtual errorHandler::PersistenceErrorhandler readOne(int objectID) override;
 

@@ -8,7 +8,7 @@
 #include "PersistableObject.h"
 // totu time_t : https://www.tutorialspoint.com/cplusplus/cpp_date_time.htm
 namespace model {
-    class Hackathon : PersistableObject {
+    class Hackathon : public PersistableObject {
     private:
         const std::string objectName = "Hackathon";
         int id;
@@ -59,7 +59,6 @@ namespace model {
 
         Json::Value objectToJson() const;
 
-        Hackathon jsonToObject(Json::Value jsonValue);
     };
 }
 

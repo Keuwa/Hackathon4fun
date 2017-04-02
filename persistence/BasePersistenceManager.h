@@ -11,7 +11,7 @@
 namespace persistence {
     class BasePersistenceManager {
     public:
-        virtual errorHandler::PersistenceErrorhandler create(model::PersistableObject objectToCreate) = 0;
+        virtual errorHandler::PersistenceErrorhandler create(model::PersistableObject& objectToCreate) = 0;
         virtual errorHandler::PersistenceErrorhandler readOne(int objectID) = 0;
         virtual errorHandler::PersistenceErrorhandler readAll() = 0;
         virtual errorHandler::PersistenceErrorhandler modify(model::PersistableObject objectToModify) = 0;
