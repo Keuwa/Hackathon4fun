@@ -5,13 +5,12 @@
 #ifndef HACKATHON4FUN_HACKATHON_H
 #define HACKATHON4FUN_HACKATHON_H
 
-#include <iostream>
-#include <string>
-#include <ctime>
+#include "PersistableObject.h"
 // totu time_t : https://www.tutorialspoint.com/cplusplus/cpp_date_time.htm
 namespace model {
-    class Hackathon {
+    class Hackathon : public PersistableObject {
     private:
+        const std::string objectName = "Hackathon";
         int id;
         std::string name;
         std::string address;
@@ -22,75 +21,44 @@ namespace model {
 
     public:
 
-        //from FileManager
-        Hackathon(int id, const std::string &name, const std::string &address, const std::string &sponsor,
-                  const std::string &reward, time_t begin_date, time_t ended_date) : id(id), name(name),
-                                                                                     address(address), sponsor(sponsor),
-                                                                                     reward(reward),
-                                                                                     begin_date(begin_date),
-                                                                                     ended_date(ended_date) { }
-        //from UIVersion
-        Hackathon(const std::string &name, const std::string &address, const std::string &sponsor,
-                  const std::string &reward, time_t begin_date, time_t ended_date) : name(name), address(address),
-                                                                                     sponsor(sponsor), reward(reward),
-                                                                                     begin_date(begin_date),
-                                                                                     ended_date(ended_date) { }
+        Hackathon(int id, const std::string &name, const std::string &address,
+                  const std::string &sponsor, const std::string &reward, time_t begin_date, time_t ended_date);
+
+        Hackathon(const std::string &name, const std::string &address,
+                  const std::string &sponsor, const std::string &reward, time_t begin_date, time_t ended_date);
 
         int getId() const {
             return id;
         }
 
-        void setId(int id) {
-            Hackathon::id = id;
-        }
+        void setId(int id);
 
-        const std::string &getName() const {
-            return name;
-        }
+        const std::string & getName() const;
 
-        void setName(const std::string &name) {
-            Hackathon::name = name;
-        }
+        void setName(const std::string &name);
 
-        const std::string &getAddress() const {
-            return address;
-        }
+        const std::string & getAddress() const;
 
-        void setAddress(const std::string &address) {
-            Hackathon::address = address;
-        }
+        void setAddress(const std::string &address);
 
-        const std::string &getSponsor() const {
-            return sponsor;
-        }
+        const std::string & getSponsor() const;
 
-        void setSponsor(const std::string &sponsor) {
-            Hackathon::sponsor = sponsor;
-        }
+        void setSponsor(const std::string &sponsor);
 
-        const std::string &getReward() const {
-            return reward;
-        }
+        const std::string & getReward() const;
 
-        void setReward(const std::string &reward) {
-            Hackathon::reward = reward;
-        }
+        void setReward(const std::string &reward);
 
-        time_t getBegin_date() const {
-            return begin_date;
-        }
+        time_t getBegin_date() const;
 
-        void setBegin_date(time_t begin_date) {
-            Hackathon::begin_date = begin_date;
-        }
+        void setBegin_date(time_t begin_date);
 
-        time_t getEnded_date() const {
-            return ended_date;
-        }
+        time_t getEnded_date() const;
 
-        void setEnded_date(time_t ended_date) {
-            Hackathon::ended_date = ended_date;
-        }
+        void setEnded_date(time_t ended_date);
+
+        Json::Value objectToJson() const;
+
     };
 }
 
