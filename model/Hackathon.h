@@ -5,9 +5,6 @@
 #ifndef HACKATHON4FUN_HACKATHON_H
 #define HACKATHON4FUN_HACKATHON_H
 
-#include <iostream>
-#include <string>
-#include <ctime>
 #include "PersistableObject.h"
 // totu time_t : https://www.tutorialspoint.com/cplusplus/cpp_date_time.htm
 namespace model {
@@ -59,6 +56,10 @@ namespace model {
         time_t getEnded_date() const;
 
         void setEnded_date(time_t ended_date);
+
+        Json::Value objectToJson() const;
+
+        Hackathon jsonToObject(Json::Value jsonValue);
     };
 }
 

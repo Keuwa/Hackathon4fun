@@ -11,6 +11,16 @@ namespace persistence {
     class HackathonPersistenceManager : BasePersistenceManager {
     public:
 
+    private:
+        virtual errorHandler::PersistenceErrorhandler create(model::PersistableObject objectToCreate) override;
+
+        virtual errorHandler::PersistenceErrorhandler readOne(int objectID) override;
+
+        virtual errorHandler::PersistenceErrorhandler readAll() override;
+
+        virtual errorHandler::PersistenceErrorhandler modify(model::PersistableObject objectToModify) override;
+
+        virtual errorHandler::PersistenceErrorhandler remove(model::PersistableObject objectToRemove) override;
     };
 }
 

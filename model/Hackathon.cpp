@@ -78,3 +78,42 @@ time_t model::Hackathon::getEnded_date() const {
 void model::Hackathon::setEnded_date(time_t ended_date) {
     Hackathon::ended_date = ended_date;
 }
+
+
+
+/*
+it with values
+        Json::Value Contact::ToJson() const {
+    Json::Value value(Json::objectValue);
+    value["name"] = name_;
+    value["phone_number"] = phone_number_;
+    return value;
+}
+ * int id;
+        std::string name;
+        std::string address;
+        std::string sponsor;
+        std::string reward;
+        time_t begin_date;
+        time_t ended_date;
+ */
+Json::Value model::Hackathon::objectToJson() const {
+    Json::Value hackathonValue(Json::objectValue);
+    hackathonValue["id"] = this->id;//generate it
+    hackathonValue["name"] = this->name;
+    hackathonValue["address"] = this->address;
+    hackathonValue["sponsor"] = this->sponsor;
+    hackathonValue["reward"] = this->reward;
+    std::stringstream dateStream;
+    dateStream << this->begin_date;
+    hackathonValue["begin_date"] = dateStream.str();
+    dateStream.str("");
+    dateStream << this->ended_date;
+    hackathonValue["ended_date"] = dateStream.str();
+
+    return hackathonValue;
+}
+
+model::Hackathon model::Hackathon::jsonToObject(Json::Value jsonValue) {
+
+}

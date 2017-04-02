@@ -7,6 +7,9 @@
 
 #include <iostream>
 #include <string>
+#include <sstream>
+#include <ctime>
+#include "../libs/jsoncpp/json/json.h"
 
 namespace model {
     class PersistableObject {
@@ -23,6 +26,7 @@ namespace model {
         const std::string &getClassName() const {
             return classname;
         }
+        virtual Json::Value objectToJson() const = 0;
     };
 }
 

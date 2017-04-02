@@ -5,7 +5,7 @@
 #ifndef HACKATHON4FUN_PERSISTENCEERRORHANDLER_H
 #define HACKATHON4FUN_PERSISTENCEERRORHANDLER_H
 
-namespace model {
+namespace errorHandler {
 
     enum PersistenceErrorhandler{
         SUCCESS = 0,
