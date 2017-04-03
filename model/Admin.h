@@ -10,7 +10,7 @@
 namespace model{
     class Admin :public User {
     public:
-        Admin(int id, const std::string &firstName, const std::string &lastname, const std::string &userState,
+        Admin(const std::string objectName,int id, const std::string &firstName, const std::string &lastname, const std::string &userState,
               const std::string &email, const std::string &login, const std::string &password);
 
         Admin();
@@ -22,6 +22,8 @@ namespace model{
         const std::string &getPassword() const;
 
         void setPassword(const std::string &password);
+
+        Json::Value objectToJson() const;
 
     private:
         std::string login;

@@ -3,16 +3,25 @@
 //
 
 #include "User.h"
+
 namespace model {
     model::User::User() {
 
     }
 
-    model::User::User(int id, const std::string &firstName, const std::string &lastname, const std::string &userState,
-                      const std::string &email) : id(id), firstName(firstName), lastname(lastname),
-                                                  userState(userState),
-                                                  email(email) {
+    model::User::User(const std::string objectName ,int id, const std::string &firstName, const std::string &lastname, const std::string &userState,
+                      const std::string &email) : PersistableObject(){
+        this->setClassName(objectName);
+        this->id = id;
+        this->firstName = firstName;
+        this->lastname = lastname;
+        this->userState = userState;
+        this->email = email;
 
+    }
+
+    const std::string &User::getObjectName() const {
+        return objectName;
     }
 
     void model::User::setId(int id) {
@@ -49,5 +58,16 @@ namespace model {
 
     void model::User::setEmail(const std::string &email) {
         User::email = email;
+    }
+
+    Json::Value model::User::objectToJson() const {
+        Json::Value hackathonValue(Json::objectValue);
+        hackathonValue["id"] = this->id;//generate it
+        hackathonValue["firstName"] = this->firstName;
+        hackathonValue["lastname"] = this->lastname;
+        hackathonValue["userState"] = this->userState;
+        hackathonValue["email"] = this->email;
+
+        return hackathonValue;
     }
 }

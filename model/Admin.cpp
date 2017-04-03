@@ -4,16 +4,15 @@
 
 #include "Admin.h"
 namespace model{
-    model::Admin::Admin(int id, const std::string &firstName, const std::string &lastname, const std::string &userState,
-                        const std::string &email, const std::string &login, const std::string &password) : User(id,
+    model::Admin::Admin(const std::string objectName,int id, const std::string &firstName, const std::string &lastname, const std::string &userState,
+                        const std::string &email, const std::string &login, const std::string &password) : User(objectName,id,
                                                                                                                 firstName,
                                                                                                                 lastname,
                                                                                                                 userState,
-                                                                                                                email),
-                                                                                                           login(login),
-                                                                                                           password(
-                                                                                                                   password) {
-
+                                                                                                                email)
+    {
+        this->password = password;
+        this->login = login;
     }
 
 
@@ -34,6 +33,23 @@ namespace model{
     void model::Admin::setPassword(const std::string &password) {
         Admin::password = password;
     }
-}
+
+    Json::Value model::Admin::objectToJson() const {
+        Json::Value hackathonValue(Json::objectValue);
+        hackathonValue["id"] = this->id;//generate it
+        hackathonValue["firstName"] = this->firstName;
+        hackathonValue["lastname"] = this->lastname;
+        hackathonValue["userState"] = this->userState;
+        hackathonValue["email"] = this->email;
+        hackathonValue["password"] = this->password;
+        hackathonValue["login"] = this->login;
+
+        return hackathonValue;
+
+    }
+
+
+
+    }
 
 

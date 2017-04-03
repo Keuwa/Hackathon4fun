@@ -8,10 +8,12 @@
 
 #include <string>
 #include <iostream>
+#include "PersistableObject.h"
 
 namespace model{
-    class User {
+    class User : public PersistableObject {
     protected:
+        const std::string objectName = "Hackathon";
         int id;
         std::string firstName;
         std::string lastname;
@@ -19,7 +21,7 @@ namespace model{
         std::string email;
 
     public:
-        User(int id, const std::string &firstName, const std::string &lastname, const std::string &userState,
+        User(const std::string objectName, int id, const std::string &firstName, const std::string &lastname, const std::string &userState,
              const std::string &email);
 
         User();
@@ -44,9 +46,9 @@ namespace model{
 
         void setEmail(const std::string &email);
 
-        void print(){
-            std::cout << "   " << firstName << lastname << userState << email ;
-        }
+        const std::string &getObjectName() const;
+
+        Json::Value objectToJson() const;
 
     };
 }
