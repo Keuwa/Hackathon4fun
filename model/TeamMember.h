@@ -11,7 +11,11 @@ namespace model{
 
     class TeamMember: public User {
     public:
-        TeamMember(const std::string objectName ,int id, const std::string &firstName, const std::string &lastname, const std::string &userState,
+        TeamMember(const std::string objectName ,
+                   int id,
+                   const std::string &firstName,
+                   const std::string &lastname,
+                   const std::string &userState,
                    const std::string &email);
 
         TeamMember();

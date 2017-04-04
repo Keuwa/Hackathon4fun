@@ -10,8 +10,14 @@
 namespace model{
     class Admin :public User {
     public:
-        Admin(const std::string objectName,int id, const std::string &firstName, const std::string &lastname, const std::string &userState,
-              const std::string &email, const std::string &login, const std::string &password);
+        Admin(const std::string objectName,
+              int id,
+              const std::string &firstName,
+              const std::string &lastname,
+              const std::string &userState,
+              const std::string &email,
+              const std::string &login,
+              const std::string &password);
 
         Admin();
 

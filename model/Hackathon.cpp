@@ -4,8 +4,13 @@
 
 #include "Hackathon.h"
 
-model::Hackathon::Hackathon(int id, const std::string &name, const std::string &address,
-                            const std::string &sponsor, const std::string &reward, time_t begin_date, time_t ended_date) : PersistableObject() {
+model::Hackathon::Hackathon(int id,
+                            const std::string &name,
+                            const std::string &address,
+                            const std::string &sponsor,
+                            const std::string &reward,
+                            time_t begin_date,
+                            time_t ended_date) : PersistableObject() {
     this->setClassName(this->objectName);
     this->id = id;
     this->name = name;
@@ -16,8 +21,12 @@ model::Hackathon::Hackathon(int id, const std::string &name, const std::string &
     this->ended_date = ended_date;
 }
 
-model::Hackathon::Hackathon(const std::string &name, const std::string &address,
-                     const std::string &sponsor, const std::string &reward, time_t begin_date, time_t ended_date) : PersistableObject() {
+model::Hackathon::Hackathon(const std::string &name,
+                            const std::string &address,
+                            const std::string &sponsor,
+                            const std::string &reward,
+                            time_t begin_date,
+                            time_t ended_date) : PersistableObject() {
     this->setClassName(this->objectName);
     this->name = name;
     this->address = address;
@@ -80,7 +89,7 @@ void model::Hackathon::setEnded_date(time_t ended_date) {
 }
 
 Json::Value model::Hackathon::objectToJson() const {
-    Json::Value hackathonValue(Json::objectValue);
+    Json::Value hackathonValue(Json::objectValue), steps_json(Json::arrayValue);
     hackathonValue["id"] = this->id;//generate it
     hackathonValue["name"] = this->name;
     hackathonValue["address"] = this->address;
@@ -92,6 +101,17 @@ Json::Value model::Hackathon::objectToJson() const {
     dateStream.str("");
     dateStream << this->ended_date;
     hackathonValue["ended_date"] = dateStream.str();
-
+    for(std::vector<Step>::iterator it = steps.begin(); it != steps.end(); ++it) {
+        steps_json.append((*it).objectToJson());
+    }
+    hackathonValue["steps"] = steps_json;
     return hackathonValue;
+}
+
+std::vector<Step> model::Hackathon::getSteps() const {
+    return steps;
+}
+
+void model::Hackathon::setSteps(std::vector<Step> steps) const {
+    Hackathon::steps = steps;
 }
