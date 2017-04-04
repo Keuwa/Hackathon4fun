@@ -1,63 +1,50 @@
 //
-// Created by Meryl Barantal on 03/04/2017.
+// Created by guillaume chieb bouares on 04/04/2017.
 //
 
-#include <string>
 #include "Step.h"
 
-model::Step::Step(const std::string objectName ,
-                  std::string name,
-                  int id,
-                  time_t begin_date,
-                  time_t end_date) {
-
-}
-
 Json::Value model::Step::objectToJson() const {
-    Json::Value stepValue(Json::objectValue);
-    stepValue["id"] = this->id;//generate it
-    stepValue["name"] = this->name;//generate it
+    Json::Value jsonStep(Json::objectValue);
+    jsonStep["id"] = this->getId();
+    jsonStep["name"] = this->getName();
     std::stringstream dateStream;
     dateStream << this->begin_date;
-    stepValue["begin_date"] = dateStream.str();
+    jsonStep["begin_date"] = dateStream.str();
     dateStream.str("");
     dateStream << this->ended_date;
-    stepValue["ended_date"] = dateStream.str();
-    return stepValue;
+    jsonStep["ended_date"] = dateStream.str();
+    return jsonStep;
 }
 
-const std::string &Step::getObjectName() const {
-    return objectName;
+void model::Step::setEnded_date(time_t ended_date) {
+    Step::ended_date = ended_date;
 }
 
-int Step::getId() const {
-    return id;
-}
-
-void Step::setId(int id) {
-    Step::id = id;
-}
-
-const std::string &Step::getName() const {
-    return name;
-}
-
-void Step::setName(const std::string &name) {
-    Step::name = name;
-}
-
-time_t Step::getBegin_date() const {
-    return begin_date;
-}
-
-void Step::setBegin_date(time_t begin_date) {
-    Step::begin_date = begin_date;
-}
-
-time_t Step::getEnded_date() const {
+time_t model::Step::getEnded_date() const {
     return ended_date;
 }
 
-void Step::setEnded_date(time_t ended_date) {
-    Step::ended_date = ended_date;
+void model::Step::setBegin_date(time_t begin_date) {
+    Step::begin_date = begin_date;
+}
+
+time_t model::Step::getBegin_date() const {
+    return begin_date;
+}
+
+void model::Step::setName(const std::string &name) {
+    Step::name = name;
+}
+
+const std::string &model::Step::getName() const {
+    return name;
+}
+
+void model::Step::setId(int id) {
+    Step::id = id;
+}
+
+int model::Step::getId() const {
+    return id;
 }

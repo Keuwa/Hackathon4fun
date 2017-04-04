@@ -19,6 +19,7 @@ model::Hackathon::Hackathon(int id,
     this->reward = reward;
     this->begin_date = begin_date;
     this->ended_date = ended_date;
+    this->steps.reserve(1);
 }
 
 model::Hackathon::Hackathon(const std::string &name,
@@ -34,6 +35,7 @@ model::Hackathon::Hackathon(const std::string &name,
     this->reward = reward;
     this->begin_date = begin_date;
     this->ended_date = ended_date;
+    this->steps.reserve(1);
 }
 
 void model::Hackathon::setId(int id) {
@@ -90,7 +92,7 @@ void model::Hackathon::setEnded_date(time_t ended_date) {
 
 Json::Value model::Hackathon::objectToJson() const {
     Json::Value hackathonValue(Json::objectValue), steps_json(Json::arrayValue);
-    hackathonValue["id"] = this->id;//generate it
+    hackathonValue["id"] = this->id; //generate it
     hackathonValue["name"] = this->name;
     hackathonValue["address"] = this->address;
     hackathonValue["sponsor"] = this->sponsor;
@@ -101,17 +103,18 @@ Json::Value model::Hackathon::objectToJson() const {
     dateStream.str("");
     dateStream << this->ended_date;
     hackathonValue["ended_date"] = dateStream.str();
-    for(std::vector<Step>::iterator it = steps.begin(); it != steps.end(); ++it) {
-        steps_json.append((*it).objectToJson());
+    for(auto iterator = steps.begin(); iterator != steps.end(); ++iterator) {
+        steps_json.append((*iterator).objectToJson());
     }
     hackathonValue["steps"] = steps_json;
     return hackathonValue;
 }
 
-std::vector<Step> model::Hackathon::getSteps() const {
+std::vector<model::Step> model::Hackathon::getSteps() const {
     return steps;
 }
 
-void model::Hackathon::setSteps(std::vector<Step> steps) const {
+void model::Hackathon::setSteps(const std::vector<Step, std::allocator<Step>> &steps) {
     Hackathon::steps = steps;
 }
+

@@ -7,6 +7,7 @@
 
 #include "PersistableObject.h"
 #include "Step.h"
+
 // totu time_t : https://www.tutorialspoint.com/cplusplus/cpp_date_time.htm
 namespace model {
     class Hackathon : public PersistableObject {
@@ -22,6 +23,8 @@ namespace model {
         std::vector<Step> steps;
 
     public:
+
+        Hackathon(Json::Value);
 
         Hackathon(int id,
                   const std::string &name,
@@ -74,8 +77,7 @@ namespace model {
 
         std::vector<Step> getSteps() const;
 
-        void setSteps(std::vector<Step> steps) const;
-
+        void setSteps(const std::vector<Step, std::allocator<Step>> &steps);
     };
 }
 
