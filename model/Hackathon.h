@@ -24,8 +24,6 @@ namespace model {
 
     public:
 
-        Hackathon(Json::Value);
-
         Hackathon(int id,
                   const std::string &name,
                   const std::string &address,

@@ -9,7 +9,7 @@
 
 namespace model {
 
-    class Step: PersistableObject {
+    class Step: public PersistableObject {
 
     private:
         int id;
@@ -18,6 +18,8 @@ namespace model {
         time_t ended_date;
 
     public:
+
+        Step(int id, const std::string &name, time_t begin_date, time_t ended_date);
 
         int getId() const;
 

@@ -4,6 +4,8 @@
 
 #include "Step.h"
 
+
+
 Json::Value model::Step::objectToJson() const {
     Json::Value jsonStep(Json::objectValue);
     jsonStep["id"] = this->getId();
@@ -47,4 +49,12 @@ void model::Step::setId(int id) {
 
 int model::Step::getId() const {
     return id;
+}
+
+model::Step::Step(int id, const std::string &name, time_t begin_date, time_t ended_date) : PersistableObject() {
+    this->id = id;
+    this->name = name;
+    this->begin_date = begin_date;
+    this->ended_date = ended_date;
+    this->setClassName("Step");
 }
