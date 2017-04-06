@@ -44,6 +44,12 @@ void model::Team::setMemberCount(int memberCount) {
     Team::memberCount = memberCount;
 }
 
+model::Team::Team(int id, std::string name, int memberCount) : PersistableObject(){
+    this->id = id;
+    this->name = name;
+    this->memberCount = memberCount;
+}
+
 Json::Value model::Team::objectToJson() const {
     Json::Value jsonTeam(Json::objectValue);
     jsonTeam["id"] = this->getId();

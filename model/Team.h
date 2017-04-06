@@ -17,13 +17,13 @@ namespace model {
     private:
         int id;
         std::string name;
+        int memberCount;
         std::vector<Mark> marks;
         std::vector<TeamMember> teamMembers;
-        int memberCount;
 
     public:
 
-        Team(int id, std::string name, std::vector<Mark> marks, std::vector<TeamMember> teamMembers, int memberCount);
+        Team(int id, std::string name, int memberCount);
 
         int getId() const;
 

@@ -20,7 +20,7 @@ namespace model {
 
     public:
 
-        Mark(int id, double value, Step step);
+        Mark(int id, double value, const Step step1);
 
         int getId() const;
 

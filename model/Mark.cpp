@@ -28,6 +28,13 @@ void model::Mark::setStep(const model::Step &step) {
     Mark::step = step;
 }
 
+model::Mark::Mark(int id, double value, model::Step step1)
+        : PersistableObject(), step(step1) {
+    this->id = id;
+    this->value = value;
+    this->step = Step(step);
+}
+
 Json::Value model::Mark::objectToJson() const {
     Json::Value jsonMark(Json::objectValue);
     jsonMark["id"] = this->getId();
