@@ -21,6 +21,8 @@ namespace model {
 
     public:
 
+        Hackathon() { }
+
         Hackathon(int id, const std::string &name, const std::string &address,
                   const std::string &sponsor, const std::string &reward, time_t begin_date, time_t ended_date);
 

@@ -2,17 +2,21 @@
 <module type="CPP_MODULE" version="4">
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/manager/HackathonManager.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/manager/HackathonManager.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/manager/BaseManager.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/manager/BaseManager.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/main.cpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/model/TeamMember.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/model/TeamMember.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/model/TeamMember.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/model/Hackathon.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/model/User.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/model/enum/PersistenceErrorHandler.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/model/PersistableObject.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/model/Admin.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/model/Hackathon.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/model/User.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/model/PersistableObject.cpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/model/Hackathon.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/model/Admin.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/model/PersistableObject.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/model/Admin.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/libs/jsoncpp/jsoncpp.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/libs/jsoncpp/json/json.h" isTestSource="false" />
