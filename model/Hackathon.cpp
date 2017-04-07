@@ -107,6 +107,11 @@ Json::Value model::Hackathon::objectToJson() const {
         steps_json.append((*iterator).objectToJson());
     }
     hackathonValue["steps"] = steps_json;
+    Json::Value teams_json(Json::arrayValue);
+    for (auto it = teams.begin(); it != teams.end() ; it++) {
+        teams_json.append((*it).objectToJson());
+    }
+    hackathonValue["teams"] = teams_json;
     return hackathonValue;
 }
 
@@ -116,5 +121,13 @@ std::vector<model::Step> model::Hackathon::getSteps() const {
 
 void model::Hackathon::setSteps(const std::vector<Step, std::allocator<Step>> &steps) {
     Hackathon::steps = steps;
+}
+
+const std::vector<model::Team> &model::Hackathon::getTeams() const {
+    return teams;
+}
+
+void model::Hackathon::setTeams(const std::vector<model::Team> &teams) {
+    Hackathon::teams = teams;
 }
 

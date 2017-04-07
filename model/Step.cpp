@@ -58,3 +58,10 @@ model::Step::Step(int id, const std::string &name, time_t begin_date, time_t end
     this->ended_date = ended_date;
     this->setClassName("Step");
 }
+
+model::Step::Step(const Step &step){
+    this->id = step.getId();
+    this->name = step.getName();
+    this->begin_date = step.getBegin_date();
+    this->ended_date = step.getEnded_date();
+}

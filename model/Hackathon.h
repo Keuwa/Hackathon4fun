@@ -7,6 +7,7 @@
 
 #include "PersistableObject.h"
 #include "Step.h"
+#include "Team.h"
 
 // totu time_t : https://www.tutorialspoint.com/cplusplus/cpp_date_time.htm
 namespace model {
@@ -21,6 +22,7 @@ namespace model {
         time_t begin_date;
         time_t ended_date;
         std::vector<Step> steps;
+        std::vector<Team> teams;
 
     public:
 
@@ -76,6 +78,10 @@ namespace model {
         std::vector<Step> getSteps() const;
 
         void setSteps(const std::vector<Step, std::allocator<Step>> &steps);
+
+        const std::vector<Team> &getTeams() const;
+
+        void setTeams(const std::vector<Team> &teams);
     };
 }
 

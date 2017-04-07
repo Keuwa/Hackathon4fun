@@ -39,8 +39,7 @@ Json::Value model::Mark::objectToJson() const {
     Json::Value jsonMark(Json::objectValue);
     jsonMark["id"] = this->getId();
     jsonMark["value"] = this->getValue();
-    Json::Value step_json(Json::arrayValue);
-    step_json.append((step).objectToJson());
-    jsonMark["step"] = step_json;
+    jsonMark["step"] = this->getStep().objectToJson();
+    ;
     return jsonMark;
 }

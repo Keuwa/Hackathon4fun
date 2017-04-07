@@ -20,6 +20,7 @@ namespace model {
     public:
 
         Step(int id, const std::string &name, time_t begin_date, time_t ended_date);
+        Step(const Step &step);
 
         int getId() const;
 
@@ -38,6 +39,7 @@ namespace model {
         void setEnded_date(time_t ended_date);
 
         virtual Json::Value objectToJson() const override;
+
     };
 }
 
