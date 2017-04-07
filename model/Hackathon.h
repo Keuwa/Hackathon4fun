@@ -6,6 +6,9 @@
 #define HACKATHON4FUN_HACKATHON_H
 
 #include "PersistableObject.h"
+#include "Step.h"
+#include "Team.h"
+
 // totu time_t : https://www.tutorialspoint.com/cplusplus/cpp_date_time.htm
 namespace model {
     class Hackathon : public PersistableObject {
@@ -18,14 +21,27 @@ namespace model {
         std::string reward;
         time_t begin_date;
         time_t ended_date;
+        std::vector<Step> steps;
+        std::vector<Team> teams;
 
     public:
 
-        Hackathon(int id, const std::string &name, const std::string &address,
-                  const std::string &sponsor, const std::string &reward, time_t begin_date, time_t ended_date);
+        Hackathon(int id,
+                  const std::string &name,
+                  const std::string &address,
+                  const std::string &sponsor,
+                  const std::string &reward,
+                  time_t begin_date,
+                  time_t ended_date
+                );
 
-        Hackathon(const std::string &name, const std::string &address,
-                  const std::string &sponsor, const std::string &reward, time_t begin_date, time_t ended_date);
+        Hackathon(const std::string &name,
+                  const std::string &address,
+                  const std::string &sponsor,
+                  const std::string &reward,
+                  time_t begin_date,
+                  time_t ended_date
+                );
 
         int getId() const {
             return id;
@@ -59,6 +75,13 @@ namespace model {
 
         Json::Value objectToJson() const;
 
+        std::vector<Step> getSteps() const;
+
+        void setSteps(const std::vector<Step, std::allocator<Step>> &steps);
+
+        const std::vector<Team> &getTeams() const;
+
+        void setTeams(const std::vector<Team> &teams);
     };
 }
 

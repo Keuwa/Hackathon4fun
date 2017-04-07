@@ -4,12 +4,19 @@
 
 #include "Admin.h"
 namespace model{
-    model::Admin::Admin(const std::string objectName,int id, const std::string &firstName, const std::string &lastname, const std::string &userState,
-                        const std::string &email, const std::string &login, const std::string &password) : User(objectName,id,
-                                                                                                                firstName,
-                                                                                                                lastname,
-                                                                                                                userState,
-                                                                                                                email)
+    model::Admin::Admin(const std::string objectName,
+                        int id,
+                        const std::string &firstName,
+                        const std::string &lastname,
+                        const std::string &userState,
+                        const std::string &email,
+                        const std::string &login,
+                        const std::string &password) : User(objectName,
+                                                            id,
+                                                            firstName,
+                                                            lastname,
+                                                            userState,
+                                                            email)
     {
         this->password = password;
         this->login = login;
