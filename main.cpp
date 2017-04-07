@@ -1,22 +1,11 @@
-#include <iostream>
-#include "model/Hackathon.h"
-#include "persistence/HackathonPersistenceManager.h"
+#include "login.h"
+#include <QApplication>
 
-using namespace std;
+int main(int argc, char *argv[])
+{
+    QApplication a(argc, argv);
+    Login w;
+    w.show();
 
-int main() {
-    cout << "Hello, World!" << endl;
-
-    time_t now = time(0);
-
-    model::Hackathon test("name","une adresse","un sponsor","une récompense",now,now);
-
-    persistence::HackathonPersistenceManager hackathonPersistenceManager;
-    errorHandler::PersistenceErrorhandler status = hackathonPersistenceManager.create(test);
-
-    if (status == errorHandler::PersistenceErrorhandler::SUCCESS) {
-        cout << "Object has been write into file " << endl;
-    }
-
-    return 0;
+    return a.exec();
 }
