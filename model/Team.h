@@ -39,7 +39,7 @@ namespace model {
 
         const std::vector<TeamMember> &getTeamMembers() const;
 
-        void setTeamMembers(const std::vector<TeamMember> &teamMembers);
+        void setTeamMembers(const std::vector<TeamMember> teamMembers);
 
         int getMemberCount() const;
 

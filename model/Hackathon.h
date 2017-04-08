@@ -26,6 +26,9 @@ namespace model {
 
     public:
 
+
+        Hackathon();
+
         Hackathon(int id,
                   const std::string &name,
                   const std::string &address,

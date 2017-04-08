@@ -15,24 +15,13 @@ namespace manager {
 
     private:
 
-        model::Hackathon currentHackathon;
         persistence::HackathonPersistenceManager hackathonPersistenceManager;
         HackathonManager(const HackathonManager&){}
         HackathonManager();
         ~HackathonManager();
     public:
         std::vector<model::Hackathon> hackathons;
-
-        const model::Hackathon &getCurrentHackathon() const {
-            return currentHackathon;
-        }
-
-        void setCurrentHackathon(const model::Hackathon &currentHackathon) {
-            HackathonManager::currentHackathon = currentHackathon;
-        }
-
-
-        virtual errorHandler::PersistenceErrorhandler create(const HackathonManager &objectToCreate) override;
+        model::Hackathon currentHackathon;
 
         virtual errorHandler::PersistenceErrorhandler loadAll() override;
 
