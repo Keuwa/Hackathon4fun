@@ -131,3 +131,4 @@ void model::Hackathon::setTeams(const std::vector<model::Team> &teams) {
     Hackathon::teams = teams;
 }
 
+model::Hackathon::Hackathon() { }

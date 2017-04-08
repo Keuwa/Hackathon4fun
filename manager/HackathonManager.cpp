@@ -4,11 +4,6 @@
 
 #include "HackathonManager.h"
 
-errorHandler::PersistenceErrorhandler manager::HackathonManager::create(
-        const manager::HackathonManager &objectToCreate) {
- return errorHandler::NOT_FOUND;
-}
-
 errorHandler::PersistenceErrorhandler manager::HackathonManager::loadAll() {
  return errorHandler::NOT_FOUND;
 }

@@ -32,7 +32,7 @@ const std::vector<model::TeamMember> &model::Team::getTeamMembers() const {
     return teamMembers;
 }
 
-void model::Team::setTeamMembers(const std::vector<model::TeamMember> &teamMembers) {
+void model::Team::setTeamMembers(const std::vector<model::TeamMember> teamMembers) {
     Team::teamMembers = teamMembers;
 }
 

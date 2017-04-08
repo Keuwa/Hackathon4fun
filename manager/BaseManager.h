@@ -14,7 +14,6 @@ namespace manager {
 
     public:
         static T& getInstance();
-        virtual errorHandler::PersistenceErrorhandler create(const T& objectToCreate) = 0;
         virtual errorHandler::PersistenceErrorhandler loadAll() = 0;
         virtual errorHandler::PersistenceErrorhandler readOne() = 0;
         virtual errorHandler::PersistenceErrorhandler updateCurrentObject() = 0;
