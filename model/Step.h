@@ -40,6 +40,7 @@ namespace model {
 
         virtual Json::Value objectToJson() const override;
 
+        Step(const Json::Value value);
     };
 }
 

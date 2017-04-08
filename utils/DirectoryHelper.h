@@ -7,13 +7,17 @@
 
 #include <iostream>
 #include <string>
+#include <dirent.h>
+#include <vector>
 
 namespace utils {
     class DirectoryHelper {
 
     public:
         static const std::string BASE_STORAGE_PATH;
-        static void createHackathonDirectory(const std::string& directoryName);
+        static void createHackathonDirectory();
+        static std::string listAllFile();
+        static void addHackathonFile(const int&id);
 
     };
 }

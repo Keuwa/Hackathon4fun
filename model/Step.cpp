@@ -65,3 +65,7 @@ model::Step::Step(const Step &step){
     this->begin_date = step.getBegin_date();
     this->ended_date = step.getEnded_date();
 }
+
+model::Step::Step(const Json::Value value) {
+
+}
