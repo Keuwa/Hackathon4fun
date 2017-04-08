@@ -9,7 +9,11 @@ namespace model {
 
     }
 
-    model::User::User(const std::string objectName ,int id, const std::string &firstName, const std::string &lastname, const std::string &userState,
+    model::User::User(const std::string objectName ,
+                      int id,
+                      const std::string &firstName,
+                      const std::string &lastname,
+                      const std::string &userState,
                       const std::string &email) : PersistableObject(){
         this->setClassName(objectName);
         this->id = id;

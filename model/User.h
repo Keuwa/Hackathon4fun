@@ -21,7 +21,11 @@ namespace model{
         std::string email;
 
     public:
-        User(const std::string objectName, int id, const std::string &firstName, const std::string &lastname, const std::string &userState,
+        User(const std::string objectName,
+             int id,
+             const std::string &firstName,
+             const std::string &lastname,
+             const std::string &userState,
              const std::string &email);
 
         User();

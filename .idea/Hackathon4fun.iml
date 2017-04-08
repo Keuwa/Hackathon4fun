@@ -13,10 +13,19 @@
       <sourceFolder url="file://$MODULE_DIR$/model/User.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/model/enum/PersistenceErrorHandler.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/model/Hackathon.cpp" isTestSource="false" />
+<<<<<<< HEAD
       <sourceFolder url="file://$MODULE_DIR$/model/User.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/model/PersistableObject.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/model/Admin.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/model/PersistableObject.h" isTestSource="false" />
+=======
+      <sourceFolder url="file://$MODULE_DIR$/model/Admin.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/model/User.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/model/PersistableObject.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/model/Step.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/model/PersistableObject.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/model/Step.h" isTestSource="false" />
+>>>>>>> 7d317a74dd606964bd5a040ca72cb4fd7e5643aa
       <sourceFolder url="file://$MODULE_DIR$/model/Admin.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/libs/jsoncpp/jsoncpp.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/libs/jsoncpp/json/json.h" isTestSource="false" />
