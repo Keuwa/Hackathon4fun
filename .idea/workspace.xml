@@ -12,9 +12,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4ab2c050-37d2-4ba0-a3d4-f61074df2d33" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/manager/BaseManager.cpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/manager/BaseManager.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/manager/HackathonManager.cpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/manager/HackathonManager.h" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/Hackathon4fun.iml" afterPath="$PROJECT_DIR$/.idea/Hackathon4fun.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeLists.txt" afterPath="$PROJECT_DIR$/CMakeLists.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model/Hackathon.h" afterPath="$PROJECT_DIR$/model/Hackathon.h" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.cpp" afterPath="$PROJECT_DIR$/main.cpp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model/Hackathon.cpp" afterPath="$PROJECT_DIR$/model/Hackathon.cpp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model/Hackathon.h" afterPath="$PROJECT_DIR$/model/Hackathon.h" />
@@ -41,6 +46,17 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+<<<<<<< .merge_file_KikzCb
+      <file leaf-file-name="BaseManager.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/manager/BaseManager.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="20" column="73" selection-start-line="20" selection-start-column="73" selection-end-line="20" selection-end-column="73" />
+              <folding>
+                <element signature="e#133#150#0" expanded="true" />
+                <element signature="e#255#264#0" expanded="true" />
+              </folding>
+=======
       <file leaf-file-name="CMakeLists.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
           <provider selected="true" editor-type-id="text-editor">
@@ -67,10 +83,21 @@
             <state vertical-scroll-proportion="0.0">
               <caret line="13" column="12" selection-start-line="13" selection-start-column="12" selection-end-line="13" selection-end-column="12" />
               <folding />
+>>>>>>> .merge_file_omgM7S
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< .merge_file_KikzCb
+      <file leaf-file-name="BaseManager.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/manager/BaseManager.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="11" column="19" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
+              <folding>
+                <element signature="e#95#104#0" expanded="true" />
+                <element signature="e#157#166#0" expanded="true" />
+=======
       <file leaf-file-name="main.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
@@ -78,16 +105,58 @@
               <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
+>>>>>>> .merge_file_omgM7S
               </folding>
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< .merge_file_KikzCb
+      <file leaf-file-name="HackathonManager.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/manager/HackathonManager.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="24" column="22" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="22" />
+=======
       <file leaf-file-name="HackathonPersistenceManager.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/persistence/HackathonPersistenceManager.cpp">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="13" column="104" selection-start-line="13" selection-start-column="104" selection-end-line="13" selection-end-column="104" />
+>>>>>>> .merge_file_omgM7S
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+<<<<<<< .merge_file_KikzCb
+      <file leaf-file-name="HackathonManager.h" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/manager/HackathonManager.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.4915254">
+              <caret line="27" column="9" selection-start-line="27" selection-start-column="9" selection-end-line="27" selection-end-column="9" />
+              <folding>
+                <element signature="e#143#167#0" expanded="true" />
+=======
+      <file leaf-file-name="Hackathon.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/model/Hackathon.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="24" column="11" selection-start-line="24" selection-start-column="11" selection-end-line="24" selection-end-column="11" />
+              <folding>
+                <element signature="e#129#159#0" expanded="true" />
+>>>>>>> .merge_file_omgM7S
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PersistenceErrorHandler.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/model/enum/PersistenceErrorHandler.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+<<<<<<< .merge_file_KikzCb
+              <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -97,24 +166,17 @@
         <entry file="file://$PROJECT_DIR$/model/Hackathon.h">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="24" column="11" selection-start-line="24" selection-start-column="11" selection-end-line="24" selection-end-column="11" />
-              <folding>
-                <element signature="e#129#159#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Hackathon.cpp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/model/Hackathon.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
+              <caret line="23" column="21" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
+=======
               <caret line="119" column="0" selection-start-line="119" selection-start-column="0" selection-end-line="119" selection-end-column="0" />
+>>>>>>> .merge_file_omgM7S
               <folding />
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< .merge_file_KikzCb
+=======
       <file leaf-file-name="PersistableObject.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/model/PersistableObject.h">
           <provider selected="true" editor-type-id="text-editor">
@@ -127,6 +189,7 @@
           </provider>
         </entry>
       </file>
+>>>>>>> .merge_file_omgM7S
     </leaf>
   </component>
   <component name="Git.Settings">
@@ -140,6 +203,12 @@
         <option value="$PROJECT_DIR$/model/enum/PersistenceErrorHandler.h" />
         <option value="$PROJECT_DIR$/utils/DirectoryHelper.h" />
         <option value="$PROJECT_DIR$/utils/DirectoryHelper.cpp" />
+<<<<<<< .merge_file_KikzCb
+        <option value="$PROJECT_DIR$/main.cpp" />
+        <option value="$PROJECT_DIR$/model/Hackathon.cpp" />
+        <option value="$PROJECT_DIR$/model/PersistableObject.h" />
+=======
+>>>>>>> .merge_file_omgM7S
         <option value="$PROJECT_DIR$/persistence/HackathonPersistenceManager.h" />
         <option value="$PROJECT_DIR$/persistence/BasePersistenceManager.h" />
         <option value="$PROJECT_DIR$/persistence/HackathonPersistenceManager.cpp" />
@@ -149,6 +218,13 @@
         <option value="$PROJECT_DIR$/model/Admin.h" />
         <option value="$PROJECT_DIR$/model/User.cpp" />
         <option value="$PROJECT_DIR$/model/Admin.cpp" />
+<<<<<<< .merge_file_KikzCb
+        <option value="$PROJECT_DIR$/model/Hackathon.h" />
+        <option value="$PROJECT_DIR$/manager/BaseManager.cpp" />
+        <option value="$PROJECT_DIR$/manager/BaseManager.h" />
+        <option value="$PROJECT_DIR$/manager/HackathonManager.cpp" />
+        <option value="$PROJECT_DIR$/manager/HackathonManager.h" />
+=======
         <option value="$PROJECT_DIR$/model/PersistableObject.h" />
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/main.cpp" />
@@ -156,6 +232,7 @@
         <option value="$PROJECT_DIR$/model/Hackathon.cpp" />
         <option value="$PROJECT_DIR$/model/Step.h" />
         <option value="$PROJECT_DIR$/model/Step.cpp" />
+>>>>>>> .merge_file_omgM7S
       </list>
     </option>
   </component>
@@ -275,6 +352,38 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Hackathon4fun" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.CidrFilesViewHelper$MyProjectTreeStructure$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Hackathon4fun" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="model" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="enum" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Hackathon4fun" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.CidrFilesViewHelper$MyProjectTreeStructure$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Hackathon4fun" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="manager" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -336,6 +445,15 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="4" y="22" width="1362" height="746" extended-state="6" />
+<<<<<<< .merge_file_KikzCb
+    <editor active="false" />
+    <layout>
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2349486" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3293944" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+=======
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2349486" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -345,18 +463,21 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32791728" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+>>>>>>> .merge_file_omgM7S
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3988183" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32833788" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TagMyCode" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32833788" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3988183" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -381,6 +502,8 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
+<<<<<<< .merge_file_KikzCb
+=======
     <entry file="file://$PROJECT_DIR$/model/PersistableObject.h">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -391,12 +514,17 @@
         </state>
       </provider>
     </entry>
+>>>>>>> .merge_file_omgM7S
     <entry file="file://$PROJECT_DIR$/model/User.h">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="50" column="27" selection-start-line="50" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
           <folding>
+<<<<<<< .merge_file_KikzCb
+            <element signature="e#112#129#0" expanded="true" />
+=======
             <element signature="e#112#129#0" expanded="false" />
+>>>>>>> .merge_file_omgM7S
           </folding>
         </state>
       </provider>
@@ -405,7 +533,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="10" column="51" selection-start-line="10" selection-start-column="51" selection-end-line="10" selection-end-column="51" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -423,9 +550,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="12" column="11" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="11" />
+<<<<<<< .merge_file_KikzCb
+=======
           <folding>
             <element signature="e#155#194#0" expanded="false" />
           </folding>
+>>>>>>> .merge_file_omgM7S
         </state>
       </provider>
     </entry>
@@ -433,9 +563,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="14" column="92" selection-start-line="14" selection-start-column="92" selection-end-line="14" selection-end-column="92" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -468,9 +595,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="11" column="38" selection-start-line="11" selection-start-column="38" selection-end-line="11" selection-end-column="38" />
-          <folding>
-            <element signature="e#145#164#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -493,9 +617,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+<<<<<<< .merge_file_KikzCb
+=======
           <folding>
             <element signature="e#155#194#0" expanded="false" />
           </folding>
+>>>>>>> .merge_file_omgM7S
         </state>
       </provider>
     </entry>
@@ -513,7 +640,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="10" column="64" selection-start-line="10" selection-start-column="64" selection-end-line="10" selection-end-column="64" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -539,9 +665,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="19" selection-start-line="0" selection-start-column="19" selection-end-line="0" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -582,9 +705,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="5" column="1" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -607,9 +727,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -641,6 +758,8 @@
         </state>
       </provider>
     </entry>
+<<<<<<< .merge_file_KikzCb
+=======
     <entry file="file://$PROJECT_DIR$/model/enum/PersistenceErrorHandler.h">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -648,6 +767,7 @@
         </state>
       </provider>
     </entry>
+>>>>>>> .merge_file_omgM7S
     <entry file="file://$PROJECT_DIR$/utils/DirectoryHelper.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -659,6 +779,8 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="10" column="51" selection-start-line="10" selection-start-column="51" selection-end-line="10" selection-end-column="51" />
+<<<<<<< .merge_file_KikzCb
+=======
           <folding />
         </state>
       </provider>
@@ -670,32 +792,51 @@
           <folding>
             <element signature="e#155#194#0" expanded="false" />
           </folding>
+>>>>>>> .merge_file_omgM7S
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/utils/DirectoryHelper.h">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
+<<<<<<< .merge_file_KikzCb
+          <caret line="14" column="92" selection-start-line="14" selection-start-column="92" selection-end-line="14" selection-end-column="92" />
+=======
           <caret line="21" column="40" selection-start-line="21" selection-start-column="40" selection-end-line="21" selection-end-column="40" />
+>>>>>>> .merge_file_omgM7S
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/model/PersistableObject.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
+<<<<<<< .merge_file_KikzCb
+          <caret line="21" column="40" selection-start-line="21" selection-start-column="40" selection-end-line="21" selection-end-column="40" />
+=======
           <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
           <folding />
+>>>>>>> .merge_file_omgM7S
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/model/TeamMember.h">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
+<<<<<<< .merge_file_KikzCb
+          <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
+=======
           <caret line="13" column="47" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="47" />
+>>>>>>> .merge_file_omgM7S
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< .merge_file_KikzCb
+    <entry file="file://$PROJECT_DIR$/model/PersistableObject.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+=======
     <entry file="file://$PROJECT_DIR$/model/User.h">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -711,51 +852,97 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="62" column="29" selection-start-line="62" selection-start-column="16" selection-end-line="62" selection-end-column="29" />
           <folding />
+>>>>>>> .merge_file_omgM7S
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/model/Admin.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
+<<<<<<< .merge_file_KikzCb
+          <caret line="11" column="38" selection-start-line="11" selection-start-column="38" selection-end-line="11" selection-end-column="38" />
+=======
           <caret line="52" column="0" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
           <folding />
+>>>>>>> .merge_file_omgM7S
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/model/Admin.h">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< .merge_file_KikzCb
+        <state vertical-scroll-proportion="0.0">
+          <caret line="13" column="47" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="47" />
+=======
         <state vertical-scroll-proportion="0.6009245">
           <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
           <folding />
+>>>>>>> .merge_file_omgM7S
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/model/TeamMember.cpp">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< .merge_file_KikzCb
+        <state vertical-scroll-proportion="0.0">
+          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/User.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="62" column="29" selection-start-line="62" selection-start-column="16" selection-end-line="62" selection-end-column="29" />
+=======
         <state vertical-scroll-proportion="0.18489985">
           <caret line="8" column="59" selection-start-line="8" selection-start-column="59" selection-end-line="8" selection-end-column="59" />
+>>>>>>> .merge_file_omgM7S
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< .merge_file_KikzCb
+    <entry file="file://$PROJECT_DIR$/model/TeamMember.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.18489985">
+          <caret line="8" column="112" selection-start-line="8" selection-start-column="112" selection-end-line="8" selection-end-column="112" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/Admin.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="52" column="5" selection-start-line="52" selection-start-column="5" selection-end-line="52" selection-end-column="5" />
+=======
     <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="5" column="74" selection-start-line="5" selection-start-column="74" selection-end-line="5" selection-end-column="74" />
+>>>>>>> .merge_file_omgM7S
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file:///Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/iterator">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< .merge_file_KikzCb
+        <state vertical-scroll-proportion="0.64714944">
+          <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+=======
         <state vertical-scroll-proportion="0.3325527">
           <caret line="1115" column="0" selection-start-line="1115" selection-start-column="0" selection-end-line="1115" selection-end-column="0" />
+>>>>>>> .merge_file_omgM7S
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/persistence/HackathonPersistenceManager.cpp">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< .merge_file_KikzCb
+        <state vertical-scroll-proportion="1.155624">
+          <caret line="50" column="27" selection-start-line="50" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+=======
         <state vertical-scroll-proportion="0.0">
           <caret line="13" column="104" selection-start-line="13" selection-start-column="104" selection-end-line="13" selection-end-column="104" />
           <folding />
@@ -766,12 +953,19 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+>>>>>>> .merge_file_omgM7S
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< .merge_file_KikzCb
+    <entry file="file://$PROJECT_DIR$/model/Hackathon.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="23" column="21" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
+=======
     <entry file="file://$PROJECT_DIR$/model/PersistableObject.h">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -796,23 +990,88 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="119" column="0" selection-start-line="119" selection-start-column="0" selection-end-line="119" selection-end-column="0" />
+>>>>>>> .merge_file_omgM7S
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< .merge_file_KikzCb
+    <entry file="file://$PROJECT_DIR$/model/enum/PersistenceErrorHandler.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+=======
     <entry file="file://$PROJECT_DIR$/model/Step.h">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="13" column="12" selection-start-line="13" selection-start-column="12" selection-end-line="13" selection-end-column="12" />
+>>>>>>> .merge_file_omgM7S
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< .merge_file_KikzCb
+    <entry file="file://$PROJECT_DIR$/persistence/BasePersistenceManager.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2542373">
+          <caret line="12" column="11" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="11" />
+=======
     <entry file="file://$PROJECT_DIR$/model/Step.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="2.002342">
           <caret line="58" column="28" selection-start-line="58" selection-start-column="28" selection-end-line="58" selection-end-column="28" />
+>>>>>>> .merge_file_omgM7S
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/persistence/HackathonPersistenceManager.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.23728813">
+          <caret line="13" column="104" selection-start-line="13" selection-start-column="104" selection-end-line="13" selection-end-column="104" />
+          <folding>
+            <element signature="e#59#78#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/manager/BaseManager.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="19" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
+          <folding>
+            <element signature="e#95#104#0" expanded="true" />
+            <element signature="e#157#166#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/manager/BaseManager.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="20" column="73" selection-start-line="20" selection-start-column="73" selection-end-line="20" selection-end-column="73" />
+          <folding>
+            <element signature="e#133#150#0" expanded="true" />
+            <element signature="e#255#264#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/manager/HackathonManager.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="24" column="22" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/manager/HackathonManager.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4915254">
+          <caret line="27" column="9" selection-start-line="27" selection-start-column="9" selection-end-line="27" selection-end-column="9" />
+          <folding>
+            <element signature="e#143#167#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
