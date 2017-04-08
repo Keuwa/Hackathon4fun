@@ -2,19 +2,17 @@
 // Created by Meryl Barantal on 09/04/2017.
 //
 
-#ifndef HACKATHON4FUN_USER_H
-#define HACKATHON4FUN_USER_H
+#ifndef HACKATHON4FUN_USERMANAGER_H
+#define HACKATHON4FUN_USERMANAGER_H
 
 
 #include "BaseManager.h"
 #include "../model/User.h"
-#include "User.h"
 
 namespace manager {
     class UserManager: public BaseManager<UserManager> {
 
     private:
-        //persistence::BasePersistenceManager teamPersistenceManager;
         UserManager();
         ~UserManager();
     public:
@@ -33,4 +31,4 @@ namespace manager {
 
 
 
-#endif //HACKATHON4FUN_USER_H
+#endif //HACKATHON4FUN_USERMANAGER_H

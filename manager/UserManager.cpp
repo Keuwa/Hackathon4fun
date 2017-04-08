@@ -2,7 +2,7 @@
 // Created by Meryl Barantal on 09/04/2017.
 //
 
-#include "User.h"
+#include "UserManager.h"
 
 errorHandler::PersistenceErrorhandler manager::UserManager::loadAll() {
     return errorHandler::NOT_FOUND;
