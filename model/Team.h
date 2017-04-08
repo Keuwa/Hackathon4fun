@@ -25,6 +25,8 @@ namespace model {
 
         Team(int id, std::string name, int memberCount);
 
+        Team();
+
         int getId() const;
 
         void setId(int id);

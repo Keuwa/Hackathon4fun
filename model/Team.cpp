@@ -68,3 +68,5 @@ Json::Value model::Team::objectToJson() const {
     jsonTeam["member_count"] = this->getMemberCount();
     return jsonTeam;
 }
+
+model::Team::Team() {}
