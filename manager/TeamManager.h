@@ -14,7 +14,6 @@ namespace manager {
     class TeamManager: public BaseManager<TeamManager> {
 
     private:
-        //persistence::BasePersistenceManager teamPersistenceManager;
         TeamManager();
         ~TeamManager();
     public:

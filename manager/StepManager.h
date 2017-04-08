@@ -13,7 +13,6 @@ namespace manager {
     class StepManager: public BaseManager<StepManager> {
 
     private:
-        //persistence::BasePersistenceManager teamPersistenceManager;
         StepManager();
         ~StepManager();
     public:
