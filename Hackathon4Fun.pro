@@ -25,12 +25,36 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += main.cpp\
         login.cpp \
-    home.cpp
+    home.cpp \
+    hackathon.cpp \
+    hackathoncreator.cpp \
+    team.cpp \
+    teamcreator.cpp \
+    step.cpp \
+    stepcreator.cpp \
+    teammember.cpp \
+    teammembercreator.cpp
 
 HEADERS  += login.h \
-    home.h
+    home.h \
+    hackathon.h \
+    hackathoncreator.h \
+    team.h \
+    teamcreator.h \
+    step.h \
+    stepcreator.h \
+    teammember.h \
+    teammembercreator.h
 
 FORMS    += login.ui \
-    home.ui
+    home.ui \
+    hackathon.ui \
+    hackathoncreator.ui \
+    team.ui \
+    teamcreator.ui \
+    step.ui \
+    stepcreator.ui \
+    teammember.ui \
+    teammembercreator.ui
 
 DISTFILES +=

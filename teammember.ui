@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>TeamMember</class>
+ <widget class="QWidget" name="TeamMember">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QLabel" name="firstNameLabel">
+     <property name="text">
+      <string>FirstName</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="lastNameLabel">
+     <property name="text">
+      <string>LastName</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="emailLabel">
+     <property name="text">
+      <string>Email</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,6 +1,6 @@
 #include "login.h"
 #include "ui_login.h"
-#include "home.h"
+#include "hackathoncreator.h"
 
 Login::Login(QWidget *parent) :
     QMainWindow(parent),
@@ -16,3 +16,15 @@ Login::~Login()
 
 
 
+
+void Login::on_pushButton_clicked()
+{
+    //this->hide();
+    HackathonCreator h;
+    h.show();
+}
+
+void Login::on_pushButton_2_clicked()
+{
+
+}
