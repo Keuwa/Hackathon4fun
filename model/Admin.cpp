@@ -54,6 +54,16 @@ namespace model{
 
     }
 
+    model::Admin::Admin(const Json::Value &admin) {
+        this->id = admin["id"].asInt();
+        this->firstName = admin["firstName"].asString();
+        this->lastname = admin["lastName"].asString();
+        this->userState = admin["userState"].asString();
+        this->email = admin["email"].asString();
+        this->password = admin["password"].asString();
+        this->login = admin["login"].asString();
+    }
+
 
 
     }
