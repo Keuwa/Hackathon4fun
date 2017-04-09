@@ -65,3 +65,6 @@ model::Team::Team(const Json::Value &team) {
     //make teamsMember iterator
     this->memberCount = team["member_count"].asInt();
 }
+
+model::Team::Team() {}
+
