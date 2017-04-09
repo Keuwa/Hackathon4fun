@@ -48,10 +48,20 @@ Json::Value model::Team::objectToJson() const {
     jsonTeam["name"] = this->getName();
     Json::Value marks_json(Json::arrayValue);
     for(auto iterator = marks.begin(); iterator != marks.end(); ++iterator) {
-        marks_json.append((*iterator).objectToJson());
+        marks_json.push_back((*iterator).objectToJson());
     }
     Json::Value members_json(Json::arrayValue);
     jsonTeam["marks"] = marks_json;
     jsonTeam["member_count"] = this->getMemberCount();
     return jsonTeam;
+}
+
+model::Team::Team(const Json::Value &team) {
+    this->id = team["id"].asInt();
+    this->name = team["name"].asString();
+    for(auto iterator = team["marks"].begin(); iterator != team["marks"].end(); ++iterator ) {
+        this->marks.push_back(Mark((*iterator)));
+    }
+    //make teamsMember iterator
+    this->memberCount = team["member_count"].asInt();
 }

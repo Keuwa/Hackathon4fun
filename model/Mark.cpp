@@ -43,3 +43,9 @@ Json::Value model::Mark::objectToJson() const {
     ;
     return jsonMark;
 }
+
+model::Mark::Mark(const Json::Value &value) {
+    this->id = value["id"].asInt();
+    this->value = value["value"].asDouble();
+    this->step = Step(value["step"]);
+}

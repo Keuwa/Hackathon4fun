@@ -22,6 +22,8 @@ namespace model {
 
     public:
 
+        Team(const Json::Value& teamJson);
+
         Team(int id, std::string name, int memberCount);
 
         int getId() const;
