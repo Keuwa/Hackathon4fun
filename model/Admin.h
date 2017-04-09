@@ -20,6 +20,7 @@ namespace model{
               const std::string &password);
 
         Admin();
+        Admin(const Json::Value &admin);
 
         const std::string &getLogin() const;
 

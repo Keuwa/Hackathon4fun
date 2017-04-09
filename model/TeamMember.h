@@ -19,6 +19,7 @@ namespace model{
                    const std::string &email);
 
         TeamMember();
+        TeamMember(const Json::Value &teamMember);
     };
 }
 
