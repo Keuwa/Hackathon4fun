@@ -6,7 +6,7 @@
 #define HACKATHON4FUN_HACKATHONPERSISTENCEMANAGER_H
 
 #include "BasePersistenceManager.h"
-
+/*
 namespace persistence {
     class HackathonPersistenceManager : public BasePersistenceManager {
     public:
@@ -20,6 +20,6 @@ namespace persistence {
 
         virtual errorHandler::PersistenceErrorhandler remove(model::PersistableObject objectToRemove) override;
     };
-}
+}*/
 
 #endif //HACKATHON4FUN_HACKATHONPERSISTENCEMANAGER_H

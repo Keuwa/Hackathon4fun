@@ -1,4 +1,4 @@
-#include "teamcreator.h"
+#include "teamcreatorview.h"
 #include "ui_teamcreator.h"
 
 TeamCreator::TeamCreator(QWidget *parent) :

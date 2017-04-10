@@ -1,4 +1,4 @@
-#include "stepcreator.h"
+#include "stepcreatorview.h"
 #include "ui_stepcreator.h"
 
 StepCreator::StepCreator(QWidget *parent) :

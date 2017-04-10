@@ -1,4 +1,4 @@
-#include "teammember.h"
+#include "teammemberview.h"
 #include "ui_teammember.h"
 
 TeamMember::TeamMember(QWidget *parent) :

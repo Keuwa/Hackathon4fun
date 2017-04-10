@@ -24,30 +24,48 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 
 SOURCES += main.cpp\
-        login.cpp \
-    home.cpp \
-    hackathon.cpp \
-    hackathoncreator.cpp \
-    team.cpp \
-    teamcreator.cpp \
-    step.cpp \
-    stepcreator.cpp \
-    teammember.cpp \
-    teammembercreator.cpp
+    libs/jsoncpp/jsoncpp.cpp \
+    model/Admin.cpp \
+    model/Hackathon.cpp \
+    model/PersistableObject.cpp \
+    model/TeamMember.cpp \
+    model/User.cpp \
+    persistence/BasePersistenceManager.cpp \
+    persistence/HackathonPersistenceManager.cpp \
+    utils/DirectoryHelper.cpp \
+    hackathonView.cpp \
+    hackathoncreatorView.cpp \
+    loginview.cpp \
+    stepview.cpp \
+    stepcreatorview.cpp \
+    teamview.cpp \
+    teamcreatorview.cpp \
+    teammemberview.cpp \
+    teammembercreatorview.cpp
 
-HEADERS  += login.h \
-    home.h \
-    hackathon.h \
-    hackathoncreator.h \
-    team.h \
-    teamcreator.h \
-    step.h \
-    stepcreator.h \
-    teammember.h \
-    teammembercreator.h
+HEADERS  += \
+    libs/jsoncpp/json/json-forwards.h \
+    libs/jsoncpp/json/json.h \
+    model/enum/PersistenceErrorHandler.h \
+    model/Admin.h \
+    model/Hackathon.h \
+    model/PersistableObject.h \
+    model/TeamMember.h \
+    model/User.h \
+    persistence/BasePersistenceManager.h \
+    persistence/HackathonPersistenceManager.h \
+    utils/DirectoryHelper.h \
+    hackathonview.h \
+    hackathoncreatorview.h \
+    loginview.h \
+    stepview.h \
+    stepcreatorview.h \
+    teamview.h \
+    teamcreatorview.h \
+    teammemberview.h \
+    teammembercreatorview.h
 
 FORMS    += login.ui \
-    home.ui \
     hackathon.ui \
     hackathoncreator.ui \
     team.ui \

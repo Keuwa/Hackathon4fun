@@ -1,4 +1,4 @@
-#include "hackathoncreator.h"
+#include "hackathoncreatorview.h"
 #include "ui_hackathoncreator.h"
 
 HackathonCreator::HackathonCreator(QWidget *parent) :

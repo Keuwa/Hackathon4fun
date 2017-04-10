@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
+    <width>455</width>
     <height>300</height>
    </rect>
   </property>
@@ -42,14 +42,14 @@
     <item>
      <layout class="QHBoxLayout" name="horizontalLayout">
       <item>
-       <widget class="QPushButton" name="pushButton_2">
+       <widget class="QPushButton" name="guestButton">
         <property name="text">
          <string>Continue as guest</string>
         </property>
        </widget>
       </item>
       <item>
-       <widget class="QPushButton" name="pushButton">
+       <widget class="QPushButton" name="loginButton">
         <property name="text">
          <string>Login</string>
         </property>
@@ -64,10 +64,42 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>400</width>
+     <width>455</width>
      <height>22</height>
     </rect>
    </property>
+   <widget class="QMenu" name="menufile">
+    <property name="title">
+     <string>Hackathon</string>
+    </property>
+    <addaction name="createHachathon"/>
+    <addaction name="showHackathons"/>
+   </widget>
+   <widget class="QMenu" name="menu_quipe">
+    <property name="title">
+     <string>Equipe</string>
+    </property>
+    <addaction name="createTeam"/>
+    <addaction name="showTeam"/>
+   </widget>
+   <widget class="QMenu" name="menuUtilisateur">
+    <property name="title">
+     <string>Utilisateur</string>
+    </property>
+    <addaction name="createUser"/>
+    <addaction name="showUser"/>
+   </widget>
+   <widget class="QMenu" name="menuStep">
+    <property name="title">
+     <string>Step</string>
+    </property>
+    <addaction name="createStep"/>
+    <addaction name="showStep"/>
+   </widget>
+   <addaction name="menufile"/>
+   <addaction name="menu_quipe"/>
+   <addaction name="menuUtilisateur"/>
+   <addaction name="menuStep"/>
   </widget>
   <widget class="QToolBar" name="mainToolBar">
    <attribute name="toolBarArea">
@@ -78,6 +110,46 @@
    </attribute>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
+  <action name="createHachathon">
+   <property name="text">
+    <string>Creer hackathon</string>
+   </property>
+  </action>
+  <action name="showHackathons">
+   <property name="text">
+    <string>Voir hackathons</string>
+   </property>
+  </action>
+  <action name="createTeam">
+   <property name="text">
+    <string>Creer equipe</string>
+   </property>
+  </action>
+  <action name="showTeam">
+   <property name="text">
+    <string>Voir equipes</string>
+   </property>
+  </action>
+  <action name="createUser">
+   <property name="text">
+    <string>Creer utilisateur</string>
+   </property>
+  </action>
+  <action name="showUser">
+   <property name="text">
+    <string>Voir utilisateur</string>
+   </property>
+  </action>
+  <action name="createStep">
+   <property name="text">
+    <string>Creer Step</string>
+   </property>
+  </action>
+  <action name="showStep">
+   <property name="text">
+    <string>Voir Step</string>
+   </property>
+  </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <resources/>
