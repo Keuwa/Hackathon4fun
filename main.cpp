@@ -2,6 +2,7 @@
 #include "model/Hackathon.h"
 #include <QApplication>
 #include <iostream>
+#include "manager/HackathonManager.h"
 
 int main(int argc, char *argv[])
 {
@@ -15,7 +16,9 @@ int main(int argc, char *argv[])
     model::Hackathon h;
     h.setName("Hey");
 
-    std::cout << h.getName();
+    manager::HackathonManager& test = manager::HackathonManager::getInstance();
+    test.setCurrentHackathon(h);
+    std::cout << test.currentHackathon.getName();
 
     return a.exec();
 }

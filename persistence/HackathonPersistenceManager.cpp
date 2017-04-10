@@ -1,7 +1,7 @@
 //
 // Created by guillaume chieb bouares on 01/04/2017.
 //
-/*#include <iostream>
+#include <iostream>
 #include <fstream>
 #include "HackathonPersistenceManager.h"
 #include "../utils/DirectoryHelper.h"
@@ -82,4 +82,4 @@ errorHandler::PersistenceErrorhandler persistence::HackathonPersistenceManager::
 errorHandler::PersistenceErrorhandler persistence::HackathonPersistenceManager::remove(
         model::PersistableObject objectToRemove) {
     return errorHandler::NOT_FOUND;
-}*/
+}
