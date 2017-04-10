@@ -48,7 +48,7 @@ Json::Value model::Team::objectToJson() const {
     jsonTeam["name"] = this->getName();
     Json::Value marks_json(Json::arrayValue);
     for(auto iterator = marks.begin(); iterator != marks.end(); ++iterator) {
-        marks_json.push_back((*iterator).objectToJson());
+        marks_json.append((*iterator).objectToJson());
     }
     Json::Value members_json(Json::arrayValue);
     jsonTeam["marks"] = marks_json;

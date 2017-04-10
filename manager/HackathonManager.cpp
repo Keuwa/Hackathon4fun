@@ -4,18 +4,26 @@
 
 #include "HackathonManager.h"
 
-errorHandler::PersistenceErrorhandler manager::HackathonManager::loadAll() {
- return errorHandler::NOT_FOUND;
+manager::HackathonManager manager::HackathonManager::instance = HackathonManager();
+
+manager::HackathonManager &manager::HackathonManager::getInstance() {
+    return instance;
 }
 
-errorHandler::PersistenceErrorhandler manager::HackathonManager::readOne() {
- return errorHandler::NOT_FOUND;
+errorHandler::PersistenceErrorhandler manager::HackathonManager::createHackathon(model::Hackathon hackathonToCreate) {
+    errorHandler::PersistenceErrorhandler status = persistenceManager.create(hackathonToCreate);
+    if (status == errorHandler::SUCCESS) {
+        this->hackathons.push_back(hackathonToCreate);
+        return errorHandler::SUCCESS;
+    }
+    return errorHandler::NOT_FOUND;
 }
 
-errorHandler::PersistenceErrorhandler manager::HackathonManager::updateCurrentObject() {
- return errorHandler::NOT_FOUND;
-}
-
-errorHandler::PersistenceErrorhandler manager::HackathonManager::removeCurrentObject() {
- return errorHandler::NOT_FOUND;
+errorHandler::PersistenceErrorhandler manager::HackathonManager::updateHackathon(model::Hackathon hackathonToUpdate) {
+    errorHandler::PersistenceErrorhandler status = persistenceManager.modify(hackathonToUpdate);
+    if(status == errorHandler::SUCCESS) {
+        this->currentHackathon = hackathonToUpdate;
+        return errorHandler::SUCCESS;
+    }
+    return errorHandler::NOT_FOUND;
 }

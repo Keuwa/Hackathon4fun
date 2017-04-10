@@ -11,7 +11,6 @@ model::Hackathon::Hackathon(int id,
                             const std::string &reward,
                             time_t begin_date,
                             time_t ended_date) : PersistableObject() {
-    this->setClassName(this->objectName);
     this->id = id;
     this->name = name;
     this->address = address;
@@ -28,7 +27,6 @@ model::Hackathon::Hackathon(const std::string &name,
                             const std::string &reward,
                             time_t begin_date,
                             time_t ended_date) : PersistableObject() {
-    this->setClassName(this->objectName);
     this->name = name;
     this->address = address;
     this->sponsor = sponsor;

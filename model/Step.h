@@ -19,7 +19,9 @@ namespace model {
 
     public:
 
-        Step(const Json::Value& stepValue);
+        Step() { }
+
+       // Step(const Json::Value& stepValue);
 
         Step(int id, const std::string &name, time_t begin_date, time_t ended_date);
         Step(const Step &step);
@@ -42,7 +44,7 @@ namespace model {
 
         virtual Json::Value objectToJson() const override;
 
-        Step(const Json::Value value);
+        Step(const Json::Value& value);
     };
 }
 
