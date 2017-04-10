@@ -5,31 +5,35 @@
 #ifndef HACKATHON4FUN_HACKATHONMANAGER_H
 #define HACKATHON4FUN_HACKATHONMANAGER_H
 
-#include "BaseManager.h"
 #include "../model/Hackathon.h"
 #include "../persistence/HackathonPersistenceManager.h"
 
 namespace manager {
-    class HackathonManager: public BaseManager<HackathonManager> {
-        friend class BaseManager<HackathonManager>;
-
-    private:
-
-        persistence::HackathonPersistenceManager hackathonPersistenceManager;
-        HackathonManager(const HackathonManager&){}
-        HackathonManager();
-        ~HackathonManager();
+    class HackathonManager {
     public:
         std::vector<model::Hackathon> hackathons;
         model::Hackathon currentHackathon;
+        static HackathonManager& getInstance();
+        errorHandler::PersistenceErrorhandler createHackathon(model::Hackathon hackathonToCreate);
+        errorHandler::PersistenceErrorhandler updateHackathon(model::Hackathon hackathonToUpdate);
 
-        virtual errorHandler::PersistenceErrorhandler loadAll() override;
+        const model::Hackathon &getCurrentHackathon() const {
+            return currentHackathon;
+        }
 
-        virtual errorHandler::PersistenceErrorhandler readOne() override;
+        void setCurrentHackathon(const model::Hackathon &currentHackathon) {
+            HackathonManager::currentHackathon = currentHackathon;
+        }
 
-        virtual errorHandler::PersistenceErrorhandler updateCurrentObject() override;
+        static void setInstance(const HackathonManager &instance) {
+            HackathonManager::instance = instance;
+        }
+    private :
+        persistence::HackathonPersistenceManager persistenceManager;
+        static HackathonManager instance;
+        HackathonManager(){}
+        ~HackathonManager(){}
 
-        virtual errorHandler::PersistenceErrorhandler removeCurrentObject() override;
     };
 }
 

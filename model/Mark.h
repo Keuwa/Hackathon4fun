@@ -35,6 +35,8 @@ namespace model {
         void setStep(const Step &step);
 
         Json::Value objectToJson() const override;
+
+        Mark(const Json::Value &value);
     };
 }
 

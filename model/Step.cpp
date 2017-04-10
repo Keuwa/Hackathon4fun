@@ -65,3 +65,14 @@ model::Step::Step(const Step &step){
     this->begin_date = step.getBegin_date();
     this->ended_date = step.getEnded_date();
 }
+
+model::Step::Step(const Json::Value &stepValue) {
+    this->id = stepValue["id"].asInt();
+    this->name = stepValue["name"].asString();
+    struct tm begin_date;
+    begin_date.tm_sec = std::stoi(stepValue["begin_date"].asString());
+    this->begin_date = mktime(&begin_date);
+    struct tm ended_date;
+    ended_date.tm_sec = std::stoi(stepValue["ended_date"].asString());
+    this->ended_date = mktime(&ended_date);
+}

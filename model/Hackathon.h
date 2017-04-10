@@ -13,7 +13,6 @@
 namespace model {
     class Hackathon : public PersistableObject {
     private:
-        const std::string objectName = "Hackathon";
         int id;
         std::string name;
         std::string address;
@@ -26,6 +25,7 @@ namespace model {
 
     public:
 
+        Hackathon(const Json::Value& json);
 
         Hackathon();
 

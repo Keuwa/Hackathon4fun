@@ -9,7 +9,7 @@
 #include "PersistableObject.h"
 #include "TeamMember.h"
 #include "Mark.h"
-
+#include <list>
 namespace model {
 
     class Team: public PersistableObject {
@@ -19,9 +19,10 @@ namespace model {
         std::string name;
         int memberCount;
         std::vector<Mark> marks;
-        std::vector<TeamMember> teamMembers;
 
     public:
+
+        Team(const Json::Value& teamJson);
 
         Team(int id, std::string name, int memberCount);
 
@@ -38,10 +39,6 @@ namespace model {
         const std::vector<Mark> &getMarks() const;
 
         void setMarks(const std::vector<Mark> &marks);
-
-        const std::vector<TeamMember> &getTeamMembers() const;
-
-        void setTeamMembers(const std::vector<TeamMember> teamMembers);
 
         int getMemberCount() const;
 

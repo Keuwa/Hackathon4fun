@@ -18,3 +18,11 @@ model::TeamMember::TeamMember(const std::string objectName,
 }
 
 model::TeamMember::TeamMember() {}
+
+model::TeamMember::TeamMember(const Json::Value &teamMember) {
+    this->id = teamMember["id"].asInt();
+    this->firstName = teamMember["firstName"].asString();
+    this->lastname = teamMember["lastName"].asString();
+    this->userState = teamMember["userState"].asString();
+    this->email = teamMember["email"].asString();
+}

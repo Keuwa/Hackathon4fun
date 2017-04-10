@@ -28,14 +28,6 @@ void model::Team::setMarks(const std::vector<model::Mark> &marks) {
     Team::marks = marks;
 }
 
-const std::vector<model::TeamMember> &model::Team::getTeamMembers() const {
-    return teamMembers;
-}
-
-void model::Team::setTeamMembers(const std::vector<model::TeamMember> teamMembers) {
-    Team::teamMembers = teamMembers;
-}
-
 int model::Team::getMemberCount() const {
     return memberCount;
 }
@@ -58,15 +50,21 @@ Json::Value model::Team::objectToJson() const {
     for(auto iterator = marks.begin(); iterator != marks.end(); ++iterator) {
         marks_json.append((*iterator).objectToJson());
     }
-    jsonTeam["marks"] = marks_json;
-
     Json::Value members_json(Json::arrayValue);
-    for (auto iterator = teamMembers.begin(); iterator != teamMembers.end(); ++iterator) {
-        members_json.append((*iterator).objectToJson());
-    }
-    jsonTeam["team_members"] = members_json;
+    jsonTeam["marks"] = marks_json;
     jsonTeam["member_count"] = this->getMemberCount();
     return jsonTeam;
 }
 
+model::Team::Team(const Json::Value &team) {
+    this->id = team["id"].asInt();
+    this->name = team["name"].asString();
+    for(auto iterator = team["marks"].begin(); iterator != team["marks"].end(); ++iterator ) {
+        this->marks.push_back(Mark((*iterator)));
+    }
+    //make teamsMember iterator
+    this->memberCount = team["member_count"].asInt();
+}
+
 model::Team::Team() {}
+
