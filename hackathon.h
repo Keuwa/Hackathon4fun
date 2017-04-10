@@ -1,13 +1,14 @@
 #ifndef HACKATHON_H
 #define HACKATHON_H
 
-#include <QMainWindow>
+#include <QWidget>
+#include "hackathon.h"
 
 namespace Ui {
 class Hackathon;
 }
 
-class Hackathon : public QMainWindow
+class Hackathon : public QWidget
 {
     Q_OBJECT
 
