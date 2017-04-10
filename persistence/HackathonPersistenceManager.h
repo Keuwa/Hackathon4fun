@@ -16,7 +16,7 @@ namespace persistence {
 
         virtual errorHandler::PersistenceErrorhandler readAll() override;
 
-        virtual errorHandler::PersistenceErrorhandler modify(model::PersistableObject objectToModify) override;
+        virtual errorHandler::PersistenceErrorhandler modify(model::PersistableObject& objectToModify) override;
 
         virtual errorHandler::PersistenceErrorhandler remove(model::PersistableObject objectToRemove) override;
     };

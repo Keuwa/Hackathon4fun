@@ -9,6 +9,7 @@
 #include <string>
 #include <sstream>
 #include <ctime>
+#include <vector>
 #include "../libs/jsoncpp/json/json.h"
 
 namespace model {

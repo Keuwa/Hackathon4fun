@@ -4,12 +4,18 @@
 
 #include "Admin.h"
 namespace model{
-    model::Admin::Admin(const std::string objectName,int id, const std::string &firstName, const std::string &lastname, const std::string &userState,
-                        const std::string &email, const std::string &login, const std::string &password) : User(objectName,id,
-                                                                                                                firstName,
-                                                                                                                lastname,
-                                                                                                                userState,
-                                                                                                                email)
+    model::Admin::Admin(const std::string objectName,
+                        int id,
+                        const std::string &firstName,
+                        const std::string &lastname,
+                        const std::string &userState,
+                        const std::string &email,
+                        const std::string &login,
+                        const std::string &password) : User(id,
+                                                            firstName,
+                                                            lastname,
+                                                            userState,
+                                                            email)
     {
         this->password = password;
         this->login = login;
@@ -46,6 +52,16 @@ namespace model{
 
         return hackathonValue;
 
+    }
+
+    model::Admin::Admin(const Json::Value &admin) {
+        this->id = admin["id"].asInt();
+        this->firstName = admin["firstName"].asString();
+        this->lastname = admin["lastName"].asString();
+        this->userState = admin["userState"].asString();
+        this->email = admin["email"].asString();
+        this->password = admin["password"].asString();
+        this->login = admin["login"].asString();
     }
 
 

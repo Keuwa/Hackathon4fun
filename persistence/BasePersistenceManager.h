@@ -14,7 +14,7 @@ namespace persistence {
         virtual errorHandler::PersistenceErrorhandler create(model::PersistableObject& objectToCreate) = 0;
         virtual errorHandler::PersistenceErrorhandler readOne(int objectID) = 0;
         virtual errorHandler::PersistenceErrorhandler readAll() = 0;
-        virtual errorHandler::PersistenceErrorhandler modify(model::PersistableObject objectToModify) = 0;
+        virtual errorHandler::PersistenceErrorhandler modify(model::PersistableObject& objectToModify) = 0;
         virtual errorHandler::PersistenceErrorhandler remove(model::PersistableObject objectToRemove) = 0;
     };
 }

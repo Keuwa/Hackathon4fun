@@ -13,7 +13,6 @@
 namespace model{
     class User : public PersistableObject {
     protected:
-        const std::string objectName = "Hackathon";
         int id;
         std::string firstName;
         std::string lastname;
@@ -21,8 +20,11 @@ namespace model{
         std::string email;
 
     public:
-        User(const std::string objectName, int id, const std::string &firstName, const std::string &lastname, const std::string &userState,
-             const std::string &email);
+        User(int id,
+             const std::string firstName,
+             const std::string lastname,
+             const std::string userState,
+             const std::string email);
 
         User();
 
@@ -45,8 +47,6 @@ namespace model{
         const std::string &getEmail() const;
 
         void setEmail(const std::string &email);
-
-        const std::string &getObjectName() const;
 
         Json::Value objectToJson() const;
 

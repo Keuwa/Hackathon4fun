@@ -41,7 +41,10 @@ SOURCES += main.cpp\
     teamview.cpp \
     teamcreatorview.cpp \
     teammemberview.cpp \
-    teammembercreatorview.cpp
+    teammembercreatorview.cpp \
+    model/Mark.cpp \
+    model/Step.cpp \
+    model/Team.cpp
 
 HEADERS  += \
     libs/jsoncpp/json/json-forwards.h \
@@ -63,7 +66,10 @@ HEADERS  += \
     teamview.h \
     teamcreatorview.h \
     teammemberview.h \
-    teammembercreatorview.h
+    teammembercreatorview.h \
+    model/Mark.h \
+    model/Step.h \
+    model/Team.h
 
 FORMS    += login.ui \
     hackathon.ui \
