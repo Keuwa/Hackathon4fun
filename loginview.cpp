@@ -1,6 +1,7 @@
 #include "loginview.h"
 #include "ui_login.h"
 #include <iostream>
+#include "Dashboard.h"
 
 Login::Login(QWidget *parent) :
     QMainWindow(parent),
@@ -42,5 +43,6 @@ void Login::on_showTeam_triggered()
 
 void Login::on_createHachathon_triggered()
 {
-
+    HackathonCreator* creation = new HackathonCreator();
+    this->setCentralWidget(creation);
 }
