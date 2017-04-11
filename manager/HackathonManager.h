@@ -16,6 +16,7 @@ namespace manager {
         static HackathonManager& getInstance();
         errorHandler::PersistenceErrorhandler createHackathon(model::Hackathon hackathonToCreate);
         errorHandler::PersistenceErrorhandler updateHackathon(model::Hackathon hackathonToUpdate);
+        errorHandler::PersistenceErrorhandler loadAllHackathons();
 
         const model::Hackathon &getCurrentHackathon() const {
             return currentHackathon;

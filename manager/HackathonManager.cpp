@@ -27,3 +27,11 @@ errorHandler::PersistenceErrorhandler manager::HackathonManager::updateHackathon
     }
     return errorHandler::NOT_FOUND;
 }
+
+errorHandler::PersistenceErrorhandler manager::HackathonManager::loadAllHackathons(){
+    errorHandler::PersistenceErrorhandler status = this->persistenceManager.readAll();
+    if(status == errorHandler::SUCCESS) {
+        return errorHandler::SUCCESS;
+    }
+    return errorHandler::NOT_FOUND;
+}
