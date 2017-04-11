@@ -44,6 +44,8 @@ namespace model {
 
         void setMemberCount(int memberCount);
 
+        void createMark(int markValue,Step step);
+
         Json::Value objectToJson() const override;
     };
 }

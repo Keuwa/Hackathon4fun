@@ -2,7 +2,7 @@
 #define HACKATHON_H
 
 #include <QWidget>
-
+#include <QtGui>
 namespace Ui {
 class Hackathon;
 }
@@ -17,6 +17,9 @@ public:
 
 private:
     Ui::Hackathon *ui;
+    QStringListModel *model;
+private slots:
+    void itemSelected();
 };
 
 #endif // HACKATHON_H
