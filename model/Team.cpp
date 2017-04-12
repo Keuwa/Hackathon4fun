@@ -56,6 +56,34 @@ Json::Value model::Team::objectToJson() const {
     return jsonTeam;
 }
 
+void model::Team::createMark(double note, model::Step step){
+    int lastId = 0;
+    if(!this->marks.empty()){
+        lastId = this->marks.back().getId();
+    }
+    int id = ++lastId;
+
+    double coef = 1;
+    int count = this->memberCount;
+    if(count > 5){
+        while(count > 5){
+            coef = coef + 0,05;
+            count = count - 1;
+        }
+    }else if (count < 5){
+        while(count < 5){
+            coef = coef - 0,05;
+            count = count + 1;
+        }
+    }
+
+    note = note * coef;
+
+    Mark newMark = model::Mark::Mark(id, note, step);
+    this->marks.push_back(newMark);
+
+}
+
 model::Team::Team(const Json::Value &team) {
     this->id = team["id"].asInt();
     this->name = team["name"].asString();
