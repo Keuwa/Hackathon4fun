@@ -14,6 +14,7 @@ errorHandler::PersistenceErrorhandler manager::HackathonManager::createHackathon
     errorHandler::PersistenceErrorhandler status = persistenceManager.create(hackathonToCreate);
     if (status == errorHandler::SUCCESS) {
         this->hackathons.push_back(hackathonToCreate);
+        this->currentHackathon = hackathonToCreate;
         return errorHandler::SUCCESS;
     }
     return errorHandler::NOT_FOUND;
@@ -26,4 +27,40 @@ errorHandler::PersistenceErrorhandler manager::HackathonManager::updateHackathon
         return errorHandler::SUCCESS;
     }
     return errorHandler::NOT_FOUND;
+}
+
+errorHandler::PersistenceErrorhandler manager::HackathonManager::loadAllHackathons(){
+    errorHandler::PersistenceErrorhandler status = this->persistenceManager.readAll();
+    if(status == errorHandler::SUCCESS) {
+        return errorHandler::SUCCESS;
+    }
+    return errorHandler::NOT_FOUND;
+}
+
+errorHandler::PersistenceErrorhandler manager::HackathonManager::createStep(model::Step& step) {
+    this->currentHackathon.appendStep(step);
+    errorHandler::PersistenceErrorhandler status = persistenceManager.modify(this->currentHackathon);
+    if(status == errorHandler::SUCCESS) {
+        for(auto iterator = this->hackathons.begin();iterator != this->hackathons.end();++iterator){
+            if((*iterator).getId() == this->currentHackathon.getId()) {
+                *iterator = this->currentHackathon;
+            }
+        }
+        return errorHandler::SUCCESS;
+    }
+    return errorHandler::FAILED;
+}
+
+errorHandler::PersistenceErrorhandler manager::HackathonManager::createTeam(model::Team& team) {
+    this->currentHackathon.appendTeam(team);
+    errorHandler::PersistenceErrorhandler status = persistenceManager.modify(this->currentHackathon);
+    if(status == errorHandler::SUCCESS) {
+        for(auto iterator = this->hackathons.begin();iterator != this->hackathons.end();++iterator){
+            if((*iterator).getId() == this->currentHackathon.getId()) {
+                *iterator = this->currentHackathon;
+            }
+        }
+        return errorHandler::SUCCESS;
+    }
+    return errorHandler::FAILED;
 }

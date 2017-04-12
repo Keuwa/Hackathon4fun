@@ -49,3 +49,6 @@ model::Mark::Mark(const Json::Value &value) {
     this->value = value["value"].asDouble();
     this->step = Step(value["step"]);
 }
+
+void appendMark(const model::Step markToAppend);
+

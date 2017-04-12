@@ -45,7 +45,10 @@ SOURCES += main.cpp\
     model/Mark.cpp \
     model/Step.cpp \
     model/Team.cpp \
-    manager/HackathonManager.cpp
+    manager/HackathonManager.cpp \
+    Dashboard.cpp \
+    hackathondetailview.cpp \
+    addmarkview.cpp
 
 HEADERS  += \
     libs/jsoncpp/json/json-forwards.h \
@@ -71,7 +74,10 @@ HEADERS  += \
     model/Mark.h \
     model/Step.h \
     model/Team.h \
-    manager/HackathonManager.h
+    manager/HackathonManager.h \
+    Dashboard.h \
+    hackathondetailview.h \
+    addmarkview.h
 
 FORMS    += login.ui \
     hackathon.ui \
@@ -81,6 +87,9 @@ FORMS    += login.ui \
     step.ui \
     stepcreator.ui \
     teammember.ui \
-    teammembercreator.ui
+    teammembercreator.ui \
+    Dashboard.ui \
+    hackathondetailview.ui \
+    addmarkview.ui
 
 DISTFILES +=

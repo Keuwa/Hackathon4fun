@@ -19,12 +19,19 @@
      <item>
       <widget class="QLabel" name="label">
        <property name="text">
-        <string>Hachathon's name</string>
+        <string>Hackathons</string>
        </property>
       </widget>
      </item>
      <item>
       <widget class="QListView" name="listView"/>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton">
+       <property name="text">
+        <string>Modifier Un hackathon selectionné</string>
+       </property>
+      </widget>
      </item>
     </layout>
    </item>

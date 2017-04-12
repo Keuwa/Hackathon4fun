@@ -15,6 +15,9 @@ public:
     explicit TeamCreator(QWidget *parent = 0);
     ~TeamCreator();
 
+private slots:
+    void on_pushButton_clicked();
+
 private:
     Ui::TeamCreator *ui;
 };

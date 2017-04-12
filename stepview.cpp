@@ -8,6 +8,7 @@ Step::Step(QWidget *parent) :
     ui->setupUi(this);
 }
 
+
 Step::~Step()
 {
     delete ui;

@@ -34,7 +34,7 @@ errorHandler::PersistenceErrorhandler persistence::HackathonPersistenceManager::
     std::string idList = utils::DirectoryHelper::listAllFile();
     for(char& c : idList){
         std::string path = "bdd/";
-        path += c;
+        path.push_back(c); //path += c;
         std::ifstream hackathonFile(path.c_str(), std::ifstream::binary);
         Json::Value hackathonValue;
         Json::Reader reader;
@@ -45,19 +45,11 @@ errorHandler::PersistenceErrorhandler persistence::HackathonPersistenceManager::
             hackathons.append(hackathonValue);
     }
 
+     manager::HackathonManager::getInstance().hackathons.reserve(idList.size());
+
     for(auto iterator = hackathons.begin();iterator != hackathons.end();iterator++) {
         manager::HackathonManager::getInstance().hackathons.push_back(model::Hackathon((*iterator)));
     }
-
-    Json::Value hackathonValue;
-    std::ifstream people_file("bdd/3",std::ios::in);
-    Json::Reader reader;
-    bool b = reader.parse(people_file, hackathonValue);
-
-    if (!b)
-        std::cout << "Error: " << reader.getFormattedErrorMessages() << std::endl;
-    else
-        std::cout<<hackathonValue;
 
     return errorHandler::SUCCESS;
 }

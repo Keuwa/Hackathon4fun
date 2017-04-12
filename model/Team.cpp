@@ -67,12 +67,12 @@ void model::Team::createMark(double note, model::Step step){
     int count = this->memberCount;
     if(count > 5){
         while(count > 5){
-            coef = coef + 0,05;
+            coef = coef + 0.05;
             count = count - 1;
         }
     }else if (count < 5){
         while(count < 5){
-            coef = coef - 0,05;
+            coef = coef - 0.05;
             count = count + 1;
         }
     }

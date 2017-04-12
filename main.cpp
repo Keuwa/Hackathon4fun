@@ -3,22 +3,27 @@
 #include <QApplication>
 #include <iostream>
 #include "manager/HackathonManager.h"
+#include "persistence/HackathonPersistenceManager.h"
 
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
+
     Login w;
     w.show();
 
     QMessageLogger m;
+    m.debug("heya");
+
+    //test.getTeams().push_back(team);
 
 
-    model::Hackathon h;
-    h.setName("Hey");
+    manager::HackathonManager::getInstance().loadAllHackathons();
 
-    manager::HackathonManager& test = manager::HackathonManager::getInstance();
-    test.setCurrentHackathon(h);
-    std::cout << test.currentHackathon.getName();
+
+
+    m.debug("heya");
+
 
     return a.exec();
 }

@@ -1,6 +1,8 @@
 #include "loginview.h"
+#include "addmarkview.h"
 #include "ui_login.h"
 #include <iostream>
+#include "Dashboard.h"
 
 Login::Login(QWidget *parent) :
     QMainWindow(parent),
@@ -8,6 +10,10 @@ Login::Login(QWidget *parent) :
 {
     ui->setupUi(this);
     QObject::connect(ui->loginButton, SIGNAL(clicked()), this, SLOT(showHackathon()));
+
+
+
+
 }
 
 Login::~Login()
@@ -42,5 +48,25 @@ void Login::on_showTeam_triggered()
 
 void Login::on_createHachathon_triggered()
 {
+    HackathonCreator* creation = new HackathonCreator();
+    this->setCentralWidget(creation);
+}
+
+void Login::on_createStep_triggered()
+{
+    StepCreator* creation = new StepCreator();
+    this->setCentralWidget(creation);
+}
+
+void Login::on_showHackathons_triggered()
+{
+    Hackathon* hackathon = new Hackathon();
+    this->setCentralWidget(hackathon);
+}
+
+void Login::on_actionAjouter_note_triggered()
+{
+    AddMarkView* view = new AddMarkView();
+    this->setCentralWidget(view);
 
 }

@@ -138,10 +138,10 @@ model::Hackathon::Hackathon(const Json::Value& value) {
     this->sponsor = value["sponsor"].asString();
     this->reward = value["reward"].asString();
     struct tm begin_date;
-    begin_date.tm_sec = std::stoi(value["begin_date"].asString());
+    begin_date.tm_sec = std::stol(value["begin_date"].asString());
     this->begin_date = mktime(&begin_date);
     struct tm ended_date;
-    ended_date.tm_sec = std::stoi(value["ended_date"].asString());
+    ended_date.tm_sec = std::stol(value["ended_date"].asString());
     this->ended_date = mktime(&ended_date);
     for(auto iterator = value["steps"].begin();iterator != value["steps"].end(); ++iterator) {
         this->steps.push_back(Step((*iterator)));
@@ -150,4 +150,12 @@ model::Hackathon::Hackathon(const Json::Value& value) {
     for(auto iterator = value["teams"].begin();iterator != value["teams"].end(); ++iterator) {
         this->teams.push_back(Team((*iterator)));
     }
+
+}
+
+void model::Hackathon::appendTeam(const model::Team teamToAppend) {
+    this->teams.push_back(teamToAppend);
+}
+void model::Hackathon::appendStep(const model::Step stepToAppend) {
+    this->steps.push_back(stepToAppend);
 }
