@@ -35,3 +35,17 @@ errorHandler::PersistenceErrorhandler manager::HackathonManager::loadAllHackatho
     }
     return errorHandler::NOT_FOUND;
 }
+
+errorHandler::PersistenceErrorhandler manager::HackathonManager::createStep(model::Step& step) {
+    this->currentHackathon.getSteps().push_back(step);
+    errorHandler::PersistenceErrorhandler status = persistenceManager.modify(this->currentHackathon);
+    if(status == errorHandler::SUCCESS) {
+        for(auto iterator = this->hackathons.begin();iterator != this->hackathons.end();++iterator){
+            if((*iterator).getId() == this->currentHackathon.getId()) {
+                *iterator = this->currentHackathon;
+            }
+        }
+        return errorHandler::SUCCESS;
+    }
+    return errorHandler::FAILED;
+}

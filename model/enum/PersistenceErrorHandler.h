@@ -10,7 +10,8 @@ namespace errorHandler {
     enum PersistenceErrorhandler{
         SUCCESS = 0,
         NOT_FOUND = 1,
-        OBJECT_TYPE_ERROR = -1
+        OBJECT_TYPE_ERROR = -1,
+        FAILED = -2
     };
 
 }

@@ -7,17 +7,19 @@
 
 #include "../model/Hackathon.h"
 #include "../persistence/HackathonPersistenceManager.h"
+#include <algorithm>
 
 namespace manager {
     class HackathonManager {
     public:
         std::vector<model::Hackathon> hackathons;
         model::Hackathon currentHackathon;
+        model::Step currentStep;
         static HackathonManager& getInstance();
         errorHandler::PersistenceErrorhandler createHackathon(model::Hackathon hackathonToCreate);
         errorHandler::PersistenceErrorhandler updateHackathon(model::Hackathon hackathonToUpdate);
         errorHandler::PersistenceErrorhandler loadAllHackathons();
-
+        errorHandler::PersistenceErrorhandler createStep(model::Step& step);
         const model::Hackathon &getCurrentHackathon() const {
             return currentHackathon;
         }
@@ -29,6 +31,7 @@ namespace manager {
         static void setInstance(const HackathonManager &instance) {
             HackathonManager::instance = instance;
         }
+
     private :
         persistence::HackathonPersistenceManager persistenceManager;
         static HackathonManager instance;

@@ -46,3 +46,9 @@ void Login::on_createHachathon_triggered()
     HackathonCreator* creation = new HackathonCreator();
     this->setCentralWidget(creation);
 }
+
+void Login::on_createStep_triggered()
+{
+    StepCreator* creation = new StepCreator();
+    this->setCentralWidget(creation);
+}

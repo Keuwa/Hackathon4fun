@@ -16,13 +16,11 @@ namespace model {
         std::string name;
         time_t begin_date;
         time_t ended_date;
+        int orderNumber;
 
     public:
 
         Step() { }
-
-       // Step(const Json::Value& stepValue);
-
         Step(int id, const std::string &name, time_t begin_date, time_t ended_date);
         Step(const Step &step);
 
@@ -43,6 +41,10 @@ namespace model {
         void setEnded_date(time_t ended_date);
 
         virtual Json::Value objectToJson() const override;
+
+        void setOrderNumber(int number);
+
+        int getOrderNumber() const;
 
         Step(const Json::Value& value);
     };
