@@ -1,6 +1,7 @@
 #include "hackathondetailview.h"
 #include "ui_hackathondetailview.h"
 #include "manager/HackathonManager.h"
+#include <QStringListModel>
 #include "QLineEdit"
 
 HackathonDetailView::HackathonDetailView(QWidget *parent) :
@@ -11,6 +12,22 @@ HackathonDetailView::HackathonDetailView(QWidget *parent) :
     manager::HackathonManager& manager = manager::HackathonManager::getInstance();
     model::Hackathon hackathon = manager.getCurrentHackathon();
 
+
+/*
+    model::Step step;
+    step.setId(0);
+    step.setName("Step1");
+    model::Team team;
+    team.setId(0);
+    team.setName("Team1");
+
+    hackathon.appendTeam(team);
+    ackathon.appendStep(step);
+
+    manager.updateHackathon(hackathon);
+
+*/
+
     QLatin1String strName = QLatin1String(hackathon.getName().c_str());
     QLatin1String strAddress = QLatin1String(hackathon.getAddress().c_str());
     QLatin1String strReward = QLatin1String(hackathon.getReward().c_str());
@@ -19,6 +36,7 @@ HackathonDetailView::HackathonDetailView(QWidget *parent) :
     QMessageLogger log;
 
     QLineEdit* nameEdit = ui->nameLineEdit;
+    nameEdit->setEnabled(false);
     QLineEdit* sponsorEdit = ui->sponsorLineEdit;
     QLineEdit* addressEdit = ui->adressLineEdit;
     QDateTimeEdit* endDateEdit = ui->endDateTimeEdit;
@@ -37,6 +55,26 @@ HackathonDetailView::HackathonDetailView(QWidget *parent) :
     addressEdit->setText(QString(strAddress));
     endDateEdit->setDateTime(endDate);
     startDateEdit->setDateTime(startDate);
+
+    QStringList listTeam;
+    QStringList listStep;
+
+    for (auto it = hackathon.getTeams().begin();it != hackathon.getTeams().end(); ++it) {
+        listTeam.append((*it).getName().c_str());
+    }
+
+    QStringListModel* modelTeam = new QStringListModel(listTeam);
+    ui->stepListView->setModel(modelTeam);
+
+
+    for (auto it = hackathon.getSteps().begin();it != hackathon.getSteps().end(); ++it) {
+        listStep.append((*it).getName().c_str());
+    }
+    QStringListModel* modelStep = new QStringListModel(listStep);
+    ui->teamListView->setModel(modelStep);
+
+
+
 }
 
 HackathonDetailView::~HackathonDetailView()

@@ -85,6 +85,10 @@ namespace model {
         const std::vector<Team> &getTeams() const;
 
         void setTeams(const std::vector<Team> &teams);
+
+        void appendTeam(const model::Team teamToAppend);
+        void appendStep(const model::Step stepToAppend);
+
     };
 }
 

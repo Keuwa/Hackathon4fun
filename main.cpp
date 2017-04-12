@@ -15,7 +15,12 @@ int main(int argc, char *argv[])
     QMessageLogger m;
     m.debug("heya");
 
+    //test.getTeams().push_back(team);
+
+
     manager::HackathonManager::getInstance().loadAllHackathons();
+
+
 
     m.debug("heya");
 

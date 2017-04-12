@@ -150,4 +150,12 @@ model::Hackathon::Hackathon(const Json::Value& value) {
     for(auto iterator = value["teams"].begin();iterator != value["teams"].end(); ++iterator) {
         this->teams.push_back(Team((*iterator)));
     }
+
+}
+
+void model::Hackathon::appendTeam(const model::Team teamToAppend) {
+    this->teams.push_back(teamToAppend);
+}
+void model::Hackathon::appendStep(const model::Step stepToAppend) {
+    this->steps.push_back(stepToAppend);
 }

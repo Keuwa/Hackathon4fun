@@ -9,6 +9,10 @@ Login::Login(QWidget *parent) :
 {
     ui->setupUi(this);
     QObject::connect(ui->loginButton, SIGNAL(clicked()), this, SLOT(showHackathon()));
+
+
+
+
 }
 
 Login::~Login()
