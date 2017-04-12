@@ -48,23 +48,13 @@ Hackathon::Hackathon(QWidget *parent) :
 
     void Hackathon::on_listView_clicked(QModelIndex const& indexElementSelectionne ){
 
-        QMessageLogger m;
-
-            manager::HackathonManager& man = manager::HackathonManager::getInstance();
-            m.info(std::to_string(indexElementSelectionne.row()).c_str());
-
-            //QVariant elementSelectionne = model->data(indexElementSelectionne, Qt::DisplayRole);
-
-
-            man.setCurrentHackathon(man.hackathons[indexElementSelectionne.row()]);
-
-            m.info("Item selected");
-            //m.info(elementSelectionne.toString().toStdString().c_str());
-
     }
 
 void Hackathon::on_listView_doubleClicked(const QModelIndex &index){
     HackathonDetailView* hackCreator = new HackathonDetailView();
+    manager::HackathonManager& man = manager::HackathonManager::getInstance();
+    man.setCurrentHackathon(man.hackathons[index.row()]);
+
     QMainWindow* parent = (Login*) this->parentWidget();
     parent->setCentralWidget(hackCreator);
 }

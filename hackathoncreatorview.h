@@ -15,6 +15,9 @@ public:
     explicit HackathonCreator(QWidget *parent = 0);
     ~HackathonCreator();
 
+private slots:
+    void on_creationButton_clicked();
+
 private:
     Ui::HackathonCreator *ui;
 };

@@ -8,6 +8,7 @@
 #include "../model/Hackathon.h"
 #include "../persistence/HackathonPersistenceManager.h"
 #include <algorithm>
+#include "model/Team.h"
 
 namespace manager {
     class HackathonManager {
@@ -20,6 +21,7 @@ namespace manager {
         errorHandler::PersistenceErrorhandler updateHackathon(model::Hackathon hackathonToUpdate);
         errorHandler::PersistenceErrorhandler loadAllHackathons();
         errorHandler::PersistenceErrorhandler createStep(model::Step& step);
+        errorHandler::PersistenceErrorhandler createTeam(model::Team& team);
         const model::Hackathon &getCurrentHackathon() const {
             return currentHackathon;
         }
