@@ -15,6 +15,9 @@ public:
     explicit StepCreator(QWidget *parent = 0);
     ~StepCreator();
 
+private slots:
+    void on_pushButton_clicked();
+
 private:
     Ui::StepCreator *ui;
 };

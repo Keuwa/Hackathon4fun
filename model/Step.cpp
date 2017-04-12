@@ -76,3 +76,9 @@ model::Step::Step(const Json::Value &stepValue) {
     ended_date.tm_sec = std::stol(stepValue["ended_date"].asString());
     this->ended_date = mktime(&ended_date);
 }
+void model::Step::setOrderNumber(int number) {
+    this->orderNumber = number;
+}
+int model::Step::getOrderNumber() const{
+    return this->orderNumber;
+}

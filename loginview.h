@@ -34,6 +34,10 @@ private slots:
 
     void on_showTeam_triggered();
 
+    void on_createStep_triggered();
+
+    void on_showHackathons_triggered();
+
 private:
     Ui::Login *ui;
  };
