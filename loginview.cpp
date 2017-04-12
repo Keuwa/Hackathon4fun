@@ -1,4 +1,5 @@
 #include "loginview.h"
+#include "addmarkview.h"
 #include "ui_login.h"
 #include <iostream>
 #include "Dashboard.h"
@@ -61,4 +62,11 @@ void Login::on_showHackathons_triggered()
 {
     Hackathon* hackathon = new Hackathon();
     this->setCentralWidget(hackathon);
+}
+
+void Login::on_actionAjouter_note_triggered()
+{
+    AddMarkView* view = new AddMarkView();
+    this->setCentralWidget(view);
+
 }

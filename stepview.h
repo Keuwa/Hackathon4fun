@@ -2,6 +2,7 @@
 #define STEP_H
 
 #include <QWidget>
+#include "model/Step.h"
 
 namespace Ui {
 class Step;
@@ -13,6 +14,7 @@ class Step : public QWidget
 
 public:
     explicit Step(QWidget *parent = 0);
+
     ~Step();
 
 private:

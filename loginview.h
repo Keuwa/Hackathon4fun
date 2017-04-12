@@ -38,6 +38,8 @@ private slots:
 
     void on_showHackathons_triggered();
 
+    void on_actionAjouter_note_triggered();
+
 private:
     Ui::Login *ui;
  };

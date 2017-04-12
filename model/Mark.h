@@ -37,6 +37,7 @@ namespace model {
         Json::Value objectToJson() const override;
 
         Mark(const Json::Value &value);
+
     };
 }
 

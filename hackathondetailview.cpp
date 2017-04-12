@@ -1,7 +1,11 @@
 #include "hackathondetailview.h"
+#include "stepview.h"
+#include "teamview.h"
+
 #include "ui_hackathondetailview.h"
 #include "manager/HackathonManager.h"
 #include <QStringListModel>
+#include <QMainWindow>
 #include "QLineEdit"
 
 HackathonDetailView::HackathonDetailView(QWidget *parent) :
@@ -13,20 +17,19 @@ HackathonDetailView::HackathonDetailView(QWidget *parent) :
     model::Hackathon hackathon = manager.getCurrentHackathon();
 
 
-/*
-    model::Step step;
-    step.setId(0);
-    step.setName("Step1");
+
+    /*model::Step step;
+    step.setId(1);
+    step.setName("Step2");
     model::Team team;
-    team.setId(0);
-    team.setName("Team1");
+    team.setId(1);
+    team.setName("Team2");
 
     hackathon.appendTeam(team);
-    ackathon.appendStep(step);
+    hackathon.appendStep(step);
 
-    manager.updateHackathon(hackathon);
+    manager.updateHackathon(hackathon);*/
 
-*/
 
     QLatin1String strName = QLatin1String(hackathon.getName().c_str());
     QLatin1String strAddress = QLatin1String(hackathon.getAddress().c_str());
@@ -63,15 +66,18 @@ HackathonDetailView::HackathonDetailView(QWidget *parent) :
         listTeam.append((*it).getName().c_str());
     }
 
-    QStringListModel* modelTeam = new QStringListModel(listTeam);
-    ui->stepListView->setModel(modelTeam);
 
 
     for (auto it = hackathon.getSteps().begin();it != hackathon.getSteps().end(); ++it) {
         listStep.append((*it).getName().c_str());
     }
+
+
     QStringListModel* modelStep = new QStringListModel(listStep);
-    ui->teamListView->setModel(modelStep);
+    QStringListModel* modelTeam = new QStringListModel(listTeam);
+
+    ui->teamListView->setModel(modelTeam);
+    ui->stepListView->setModel(modelStep);
 
 
 
@@ -80,4 +86,34 @@ HackathonDetailView::HackathonDetailView(QWidget *parent) :
 HackathonDetailView::~HackathonDetailView()
 {
     delete ui;
+}
+
+void HackathonDetailView::on_teamListView_doubleClicked(const QModelIndex &index)
+{
+    /*manager::HackathonManager& man = manager::HackathonManager::getInstance();
+    man.currentStep = man.currentHackathon.getSteps()[index.row()];
+
+    Team* teamView = new Team();
+    QMainWindow* win = qobject_cast<QMainWindow*>(QApplication::activeWindow());
+    win->setCentralWidget(teamView);*/
+}
+
+void HackathonDetailView::on_teamListView_clicked(const QModelIndex &index)
+{
+
+}
+
+void HackathonDetailView::on_stepListView_activated(const QModelIndex &index)
+{
+
+}
+
+void HackathonDetailView::on_stepListView_doubleClicked(const QModelIndex &index)
+{
+    manager::HackathonManager& man = manager::HackathonManager::getInstance();
+    man.currentStep = man.currentHackathon.getSteps()[index.row()];
+
+    Step* stepView = new Step();
+    QMainWindow* win = qobject_cast<QMainWindow*>(QApplication::activeWindow());
+    win->setCentralWidget(stepView);
 }

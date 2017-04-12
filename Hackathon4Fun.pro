@@ -47,7 +47,8 @@ SOURCES += main.cpp\
     model/Team.cpp \
     manager/HackathonManager.cpp \
     Dashboard.cpp \
-    hackathondetailview.cpp
+    hackathondetailview.cpp \
+    addmarkview.cpp
 
 HEADERS  += \
     libs/jsoncpp/json/json-forwards.h \
@@ -75,7 +76,8 @@ HEADERS  += \
     model/Team.h \
     manager/HackathonManager.h \
     Dashboard.h \
-    hackathondetailview.h
+    hackathondetailview.h \
+    addmarkview.h
 
 FORMS    += login.ui \
     hackathon.ui \
@@ -87,6 +89,7 @@ FORMS    += login.ui \
     teammember.ui \
     teammembercreator.ui \
     Dashboard.ui \
-    hackathondetailview.ui
+    hackathondetailview.ui \
+    addmarkview.ui
 
 DISTFILES +=

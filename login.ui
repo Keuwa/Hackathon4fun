@@ -108,8 +108,8 @@
     <property name="title">
      <string>Hackathon</string>
     </property>
-    <addaction name="createHachathon"/>
     <addaction name="showHackathons"/>
+    <addaction name="createHachathon"/>
    </widget>
    <widget class="QMenu" name="menu_quipe">
     <property name="title">
@@ -118,13 +118,6 @@
     <addaction name="createTeam"/>
     <addaction name="showTeam"/>
    </widget>
-   <widget class="QMenu" name="menuUtilisateur">
-    <property name="title">
-     <string>Utilisateur</string>
-    </property>
-    <addaction name="createUser"/>
-    <addaction name="showUser"/>
-   </widget>
    <widget class="QMenu" name="menuStep">
     <property name="title">
      <string>Step</string>
@@ -132,10 +125,16 @@
     <addaction name="createStep"/>
     <addaction name="showStep"/>
    </widget>
+   <widget class="QMenu" name="menuNote">
+    <property name="title">
+     <string>Note</string>
+    </property>
+    <addaction name="actionAjouter_note"/>
+   </widget>
    <addaction name="menufile"/>
    <addaction name="menu_quipe"/>
-   <addaction name="menuUtilisateur"/>
    <addaction name="menuStep"/>
+   <addaction name="menuNote"/>
   </widget>
   <widget class="QToolBar" name="mainToolBar">
    <attribute name="toolBarArea">
@@ -153,7 +152,7 @@
   </action>
   <action name="showHackathons">
    <property name="text">
-    <string>Voir hackathons</string>
+    <string>Home</string>
    </property>
   </action>
   <action name="createTeam">
@@ -184,6 +183,11 @@
   <action name="showStep">
    <property name="text">
     <string>Voir Step</string>
+   </property>
+  </action>
+  <action name="actionAjouter_note">
+   <property name="text">
+    <string>Ajouter note</string>
    </property>
   </action>
  </widget>
